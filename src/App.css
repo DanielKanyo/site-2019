@@ -23,11 +23,7 @@
 }
 
 .social-icon {
-  margin-left: 12px !important;
-  border-radius: 3px !important;
-}
-
-.social-icon span {
+  margin-left: 10px !important;
   border-radius: 3px !important;
 }
 
@@ -42,10 +38,6 @@
 
 .menu-btn-transparent:hover {
   background: rgba(255, 255, 255, 0.1) !important;
-}
-
-.menu-btn-transparent span {
-  border-radius: 3px !important;
 }
 
 .menu-btn-light {
