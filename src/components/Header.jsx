@@ -42,20 +42,20 @@ class Header extends Component {
     return (
       <div className="Header">
         <div className={classes.root}>
-          <AppBar className="app-bar" position="static">
+          <AppBar className={"app-bar-" + this.props.headerStyleProp.class} position="static">
             <Toolbar>
               <Typography variant="title" color="inherit" className={classes.flex}>
                 Welcome
               </Typography>
               <div className="social-menu-line">
                 <IconButton className="social-icon" color="inherit" aria-label="Facebook">
-                  <FacebookBoxIcon color="#fff" />
+                  <FacebookBoxIcon color={this.props.headerStyleProp.color} />
                 </IconButton>
                 <IconButton className="social-icon" color="inherit" aria-label="GitHub">
-                  <GithubIcon color="#fff" />
+                  <GithubIcon color={this.props.headerStyleProp.color} />
                 </IconButton>
                 <IconButton className="social-icon" color="inherit" aria-label="Instagram">
-                  <InstagramIcon color="#fff" />
+                  <InstagramIcon color={this.props.headerStyleProp.color} />
                 </IconButton>
               </div>
               <IconButton className="menu-btn" color="inherit" aria-label="Menu">
