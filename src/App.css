@@ -2,14 +2,16 @@
   padding: 10px 15px;
   background: transparent !important;
   box-shadow: none !important;
+  transition: all 0.2s;
 }
 
 .app-bar-light {
-  padding: 10px 15px;
+  padding: 5px 15px;
   background: white !important;
   box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15) !important;
   border-bottom-left-radius: 3px !important;
   border-bottom-right-radius: 3px !important;
+  transition: all 0.2s;
 }
 
 .header-bg-img {
@@ -33,17 +35,25 @@
   background: rgba(255, 255, 255, 0.1) !important;
 }
 
-.menu-btn {
+.menu-btn-transparent {
   display: none !important;
   border-radius: 3px !important;
 }
 
-.menu-btn:hover {
+.menu-btn-transparent:hover {
   background: rgba(255, 255, 255, 0.1) !important;
 }
 
-.menu-btn span {
+.menu-btn-transparent span {
   border-radius: 3px !important;
+}
+
+.menu-btn-light {
+  display: none !important;
+}
+
+.menu-btn-light span {
+  color: #3a3a3a !important;
 }
 
 .Content {
@@ -66,7 +76,10 @@
 }
 
 @media screen and (max-width: 700px) {
-  .menu-btn {
+  .menu-btn-transparent {
+    display: block !important;
+  }
+  .menu-btn-light {
     display: block !important;
   }
   .social-menu-line {

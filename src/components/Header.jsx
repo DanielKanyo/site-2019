@@ -58,7 +58,7 @@ class Header extends Component {
                   <InstagramIcon color={this.props.headerStyleProp.color} />
                 </IconButton>
               </div>
-              <IconButton className="menu-btn" color="inherit" aria-label="Menu">
+              <IconButton className={"menu-btn-" + this.props.headerStyleProp.class} color="inherit" aria-label="Menu">
                 <MenuIcon />
               </IconButton>
             </Toolbar>
