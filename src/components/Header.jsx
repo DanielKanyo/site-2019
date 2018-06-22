@@ -34,19 +34,7 @@ class Header extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      menuVisibility: 'show',
-    };
-  }
-
-  componentDidMount() {
-    let windowSize = window.innerWidth;
-    // hide menu icon if window smaller than 700px
-    if (windowSize > 700) {
-      this.setState({
-        menuVisibility: 'hide'
-      });
-    }
+    this.state = {};
   }
 
   render() {
@@ -59,16 +47,18 @@ class Header extends Component {
               <Typography variant="title" color="inherit" className={classes.flex}>
                 Welcome
               </Typography>
-              <IconButton className="social-icon" color="inherit" aria-label="Facebook">
-                <FacebookBoxIcon color="#fff" />
-              </IconButton>
-              <IconButton className="social-icon" color="inherit" aria-label="GitHub">
-                <GithubIcon color="#fff" />
-              </IconButton>
-              <IconButton className="social-icon" color="inherit" aria-label="Instagram">
-                <InstagramIcon color="#fff" />
-              </IconButton>
-              <IconButton className={'menu-btn ' + this.state.menuVisibility} color="inherit" aria-label="Menu">
+              <div className="social-menu-line">
+                <IconButton className="social-icon" color="inherit" aria-label="Facebook">
+                  <FacebookBoxIcon color="#fff" />
+                </IconButton>
+                <IconButton className="social-icon" color="inherit" aria-label="GitHub">
+                  <GithubIcon color="#fff" />
+                </IconButton>
+                <IconButton className="social-icon" color="inherit" aria-label="Instagram">
+                  <InstagramIcon color="#fff" />
+                </IconButton>
+              </div>
+              <IconButton className="menu-btn" color="inherit" aria-label="Menu">
                 <MenuIcon />
               </IconButton>
             </Toolbar>
