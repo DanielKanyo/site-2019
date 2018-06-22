@@ -2,16 +2,16 @@
   padding: 10px 15px;
   background: transparent !important;
   box-shadow: none !important;
-  transition: all 0.2s;
+  transition: all 0.4s;
 }
 
 .app-bar-light {
-  padding: 5px 15px;
+  padding: 10px 15px;
   background: white !important;
   box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15) !important;
   border-bottom-left-radius: 3px !important;
   border-bottom-right-radius: 3px !important;
-  transition: all 0.2s;
+  transition: all 0.4s;
 }
 
 .header-bg-img {
@@ -64,6 +64,9 @@
 @media screen and (max-width: 600px) {
   .header-bg-img {
     background-size: auto 100%;
+  }
+  .Content {
+    padding: 20px;
   }
 }
 
