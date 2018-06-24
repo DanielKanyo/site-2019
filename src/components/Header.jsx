@@ -35,6 +35,12 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+
+    this.handleToggleDrawer = this.handleToggleDrawer.bind(this);
+  }
+
+  handleToggleDrawer(side, open, e) {
+    this.props.handleToggleDrawer(side, open);
   }
 
   render() {
@@ -45,7 +51,7 @@ class Header extends Component {
           <AppBar className={"app-bar-" + this.props.headerStyleProp.class} position="static">
             <Toolbar>
               <Typography variant="title" color="inherit" className={classes.flex}>
-                Welcome
+                <span className={"header-text-" + this.props.headerStyleProp.class}>Welcome</span>
               </Typography>
               <div className="social-menu-line">
                 <IconButton className="social-icon" color="inherit" aria-label="Facebook">
@@ -58,7 +64,12 @@ class Header extends Component {
                   <InstagramIcon color={this.props.headerStyleProp.color} />
                 </IconButton>
               </div>
-              <IconButton className={"menu-btn-" + this.props.headerStyleProp.class} color="inherit" aria-label="Menu">
+              <IconButton 
+                onClick={(e) => this.handleToggleDrawer('right', true, e)} 
+                className={"menu-btn-" + this.props.headerStyleProp.class} 
+                color="inherit" 
+                aria-label="Menu"
+              >
                 <MenuIcon />
               </IconButton>
             </Toolbar>

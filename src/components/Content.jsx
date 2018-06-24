@@ -6,7 +6,7 @@ class Content extends Component {
     return (
       <div className="Content">
         <div className="content-placeholder">
-
+          <div className="content-profile-image"></div>
         </div>
       </div>
     );

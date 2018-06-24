@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Content from './components/Content';
+import Menu from './components/Menu';
 import './App.css';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
     };
 
     this.handleScroll = this.handleScroll.bind(this);
+    this.toggleDrawer = this.toggleDrawer.bind(this);
   }
 
   componentDidMount() {
@@ -43,11 +45,19 @@ class App extends Component {
     }
   }
 
+  toggleDrawer(side, open) {
+    this.child.toggleMenu(side, open) // do stuff
+  }
+
   render() {
     return (
       <div className="App">
-        <Header headerStyleProp={this.state.headerStyle} />
+        <Header
+          handleToggleDrawer={this.toggleDrawer.bind(this)}
+          headerStyleProp={this.state.headerStyle}
+        />
         <Content />
+        <Menu onRef={ref => (this.child = ref)} />
       </div>
     );
   }
