@@ -6,7 +6,13 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import Divider from '@material-ui/core/Divider';
 
+import AccountIcon from 'mdi-react/AccountIcon';
+import ArchiveIcon from 'mdi-react/ArchiveIcon';
+import SchoolIcon from 'mdi-react/SchoolIcon';
+import CameraIcon from 'mdi-react/CameraIcon';
+import MessageProcessingIcon from 'mdi-react/MessageProcessingIcon';
 import FacebookBoxIcon from 'mdi-react/FacebookBoxIcon';
 import GithubIcon from 'mdi-react/GithubBoxIcon';
 import InstagramIcon from 'mdi-react/InstagramIcon';
@@ -47,6 +53,39 @@ class Menu extends React.Component {
     const sideList = (
       <div className={classes.list}>
         <List>
+          <ListItem button className="list-item-button">
+            <ListItemIcon>
+              <AccountIcon color="rgba(0, 0, 0, 0.54)" />
+            </ListItemIcon>
+            <ListItemText primary="About" />
+          </ListItem>
+          <ListItem button className="list-item-button">
+            <ListItemIcon>
+              <ArchiveIcon color="rgba(0, 0, 0, 0.54)" />
+            </ListItemIcon>
+            <ListItemText primary="Projects" />
+          </ListItem>
+          <ListItem button className="list-item-button">
+            <ListItemIcon>
+              <SchoolIcon color="rgba(0, 0, 0, 0.54)" />
+            </ListItemIcon>
+            <ListItemText primary="Skills" />
+          </ListItem>
+          <ListItem button className="list-item-button">
+            <ListItemIcon>
+              <CameraIcon color="rgba(0, 0, 0, 0.54)" />
+            </ListItemIcon>
+            <ListItemText primary="Hobbie" />
+          </ListItem>
+          <ListItem button className="list-item-button">
+            <ListItemIcon>
+              <MessageProcessingIcon color="rgba(0, 0, 0, 0.54)" />
+            </ListItemIcon>
+            <ListItemText primary="Contact" />
+          </ListItem>
+
+          <Divider className="menu-divider" />
+
           <ListItem button className="list-item-button">
             <ListItemIcon>
               <FacebookBoxIcon color="rgba(0, 0, 0, 0.54)" />

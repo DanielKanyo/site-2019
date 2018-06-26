@@ -8,7 +8,9 @@
     "mdi-react": "^3.4.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-scroll": "^1.7.9",
+    "react-swipeable-views": "^0.12.14"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   handleScroll() {
-    if (window.scrollY > 230) {
+    if (window.scrollY > 180) {
       this.setState({
         headerStyle: {
           color: '#3a3a3a',

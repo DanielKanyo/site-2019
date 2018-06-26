@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import About from './About';
+import SwipeableView from './SwipeableView';
 import '../App.css';
 
 class Content extends Component {
@@ -8,6 +9,7 @@ class Content extends Component {
       <div className="Content">
         <div className="content-placeholder">
             <About />
+            <SwipeableView />
         </div>
       </div>
     );

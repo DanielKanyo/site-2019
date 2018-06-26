@@ -6,12 +6,14 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Button from '@material-ui/core/Button';
 
 import FacebookBoxIcon from 'mdi-react/FacebookBoxIcon';
 import GithubIcon from 'mdi-react/GithubBoxIcon';
 import InstagramIcon from 'mdi-react/InstagramIcon';
+
+import { animateScroll as scroll, scroller } from 'react-scroll';
 
 const styles = {
   root: {
@@ -37,6 +39,20 @@ class Header extends Component {
     this.state = {};
 
     this.handleToggleDrawer = this.handleToggleDrawer.bind(this);
+    this.scrollToTop = this.scrollToTop.bind(this);
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
+
+  scrollTo(string) {
+    scroller.scrollTo(string, {
+      duration: 300,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: -100
+    });
   }
 
   handleToggleDrawer(side, open, e) {
@@ -50,28 +66,61 @@ class Header extends Component {
         <div className={classes.root}>
           <AppBar className={"app-bar-" + this.props.headerStyleProp.class} position="static">
             <Toolbar>
-              <Typography variant="title" color="inherit" className={classes.flex}>
-                <span className={"header-text-" + this.props.headerStyleProp.class}>Welcome</span>
+              <Typography variant="title" color="inherit" className={classes.flex} >
+                {/* <span className={"header-text-" + this.props.headerStyleProp.class}>Welcome</span> */}
+                <div className="header-navigation">
+                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('About')}>
+                    <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
+                      About Me
+                    </span>
+                  </Button>
+                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('About')}>
+                    <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
+                      Projects
+                    </span>
+                  </Button>
+                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('About')}>
+                    <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
+                      Skills
+                    </span>
+                  </Button>
+                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('About')}>
+                    <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
+                      Hobbie
+                    </span>
+                  </Button>
+                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('About')}>
+                    <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
+                      Contact
+                    </span>
+                  </Button>
+                </div>
               </Typography>
               <div className="social-menu-line">
-                <IconButton className="social-icon" color="inherit" aria-label="Facebook">
-                  <FacebookBoxIcon color={this.props.headerStyleProp.color} />
-                </IconButton>
-                <IconButton className="social-icon" color="inherit" aria-label="GitHub">
-                  <GithubIcon color={this.props.headerStyleProp.color} />
-                </IconButton>
-                <IconButton className="social-icon" color="inherit" aria-label="Instagram">
-                  <InstagramIcon color={this.props.headerStyleProp.color} />
-                </IconButton>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/kanyo.daniel">
+                  <Button className="social-icon">
+                    <FacebookBoxIcon color={this.props.headerStyleProp.color} />
+                  </Button>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/DanielKanyo">
+                  <Button className="social-icon">
+                    <GithubIcon color={this.props.headerStyleProp.color} />
+                  </Button>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/daniel_kanyo/">
+                  <Button className="social-icon">
+                    <InstagramIcon color={this.props.headerStyleProp.color} />
+                  </Button>
+                </a>
               </div>
-              <IconButton 
-                onClick={(e) => this.handleToggleDrawer('right', true, e)} 
-                className={"menu-btn-" + this.props.headerStyleProp.class} 
-                color="inherit" 
+              <Button
+                onClick={(e) => this.handleToggleDrawer('right', true, e)}
+                className={"menu-btn-" + this.props.headerStyleProp.class}
+                color="inherit"
                 aria-label="Menu"
               >
                 <MenuIcon />
-              </IconButton>
+              </Button>
             </Toolbar>
           </AppBar>
         </div>

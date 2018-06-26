@@ -24,7 +24,7 @@ class About extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className="About">
+      <div className="About" name="About">
         <div className="content-about-profile-image"></div>
         <div className="content-about-info">
           <h3>Daniel Kanyo</h3>
