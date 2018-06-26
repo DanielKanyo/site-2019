@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import About from './About';
 import '../App.css';
 
 class Content extends Component {
@@ -6,11 +7,7 @@ class Content extends Component {
     return (
       <div className="Content">
         <div className="content-placeholder">
-          <div className="content-profile-image"></div>
-          <div className="content-name">
-            <h3>Daniel Kanyo</h3>
-            <h6>DEVELOPER</h6>
-          </div>
+            <About />
         </div>
       </div>
     );
