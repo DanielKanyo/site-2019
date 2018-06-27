@@ -49,15 +49,16 @@ class SwipeableView extends Component {
         <div className={classes.root}>
           <AppBar position="static" color="default">
             <Tabs
+              className="swipeable-view-tabs"
               value={this.state.value}
               onChange={this.handleChange}
               indicatorColor="primary"
               textColor="primary"
               fullWidth
             >
-              <Tab label="Item One" />
-              <Tab label="Item Two" />
-              <Tab label="Item Three" />
+              <Tab label="Projects" />
+              <Tab label="Skills" />
+              <Tab label="Hobbie" />
             </Tabs>
           </AppBar>
           <SwipeableViews
