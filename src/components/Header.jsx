@@ -74,17 +74,17 @@ class Header extends Component {
                       About Me
                     </span>
                   </Button>
-                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('About')}>
+                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('SwipeableView')}>
                     <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
                       Projects
                     </span>
                   </Button>
-                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('About')}>
+                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('SwipeableView')}>
                     <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
                       Skills
                     </span>
                   </Button>
-                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('About')}>
+                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('SwipeableView')}>
                     <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
                       Hobbie
                     </span>

@@ -6,6 +6,9 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import ArchiveIcon from 'mdi-react/ArchiveIcon';
+import SchoolIcon from 'mdi-react/SchoolIcon';
+import CameraIcon from 'mdi-react/CameraIcon';
 import '../App.css';
 
 function TabContainer({ children, dir }) {
@@ -31,7 +34,7 @@ const styles = theme => ({
 class SwipeableView extends Component {
 
   state = {
-    value: 0,
+    value: 1,
   };
 
   handleChange = (event, value) => {
@@ -45,7 +48,7 @@ class SwipeableView extends Component {
   render() {
     const { classes, theme } = this.props;
     return (
-      <div className="SwipeableView">
+      <div className="SwipeableView" name="SwipeableView">
         <div className={classes.root}>
           <AppBar position="static" color="default">
             <Tabs
@@ -56,9 +59,9 @@ class SwipeableView extends Component {
               textColor="primary"
               fullWidth
             >
-              <Tab label="Projects" />
-              <Tab label="Skills" />
-              <Tab label="Hobbie" />
+              <Tab label="Projects" icon={<ArchiveIcon />} />
+              <Tab label="Skills" icon={<SchoolIcon />} />
+              <Tab label="Hobbie" icon={<CameraIcon />} />
             </Tabs>
           </AppBar>
           <SwipeableViews

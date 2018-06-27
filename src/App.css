@@ -174,7 +174,7 @@
 
 .content-about-text {
   text-align: center;
-  padding: 20px 300px 60px 300px;
+  padding: 20px 300px 30px 300px;
   font-size: 14px;
   line-height: 22px;
   color: #b3b3b3;
@@ -190,7 +190,25 @@
 
 .SwipeableView button {
   max-width: none !important;
-  min-width: 20px !important;
+  min-width: 60px !important;
+  border-radius: 3px !important;
+  margin: 15px 5px;
+  min-height: 90px !important;
+}
+
+.MuiTab-textColorPrimary-118 svg {
+  fill: rgba(0, 0, 0, 0.54);
+  margin: 5px 0px 10px 0px;
+}
+
+.MuiTab-textColorPrimary-118.MuiTab-selected-120 {
+  color: white !important; 
+  background: #4286f4 !important;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.14);
+}
+
+.MuiTab-textColorPrimary-118.MuiTab-selected-120 svg {
+  fill: white;
 }
 
 .swipeable-view-tabs .TabIndicator-root-127 {
@@ -217,7 +235,7 @@
     padding: 10px 15px;
   }
   .content-about-text {
-    padding: 20px 50px 60px 50px;
+    padding: 20px 50px 30px 50px;
   }
 }
 
@@ -238,6 +256,6 @@
 
 @media screen and (max-width: 700px) {
   .content-about-text {
-    padding: 15px 20px 40px 20px;
+    padding: 15px 20px 30px 20px;
   }
 }
