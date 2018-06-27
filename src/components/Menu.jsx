@@ -9,13 +9,15 @@ import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 
 import AccountIcon from 'mdi-react/AccountIcon';
-import ArchiveIcon from 'mdi-react/ArchiveIcon';
-import SchoolIcon from 'mdi-react/SchoolIcon';
+import LaptopIcon from 'mdi-react/LaptopIcon';
+import StarIcon from 'mdi-react/StarIcon';
 import CameraIcon from 'mdi-react/CameraIcon';
 import MessageProcessingIcon from 'mdi-react/MessageProcessingIcon';
 import FacebookBoxIcon from 'mdi-react/FacebookBoxIcon';
 import GithubIcon from 'mdi-react/GithubBoxIcon';
 import InstagramIcon from 'mdi-react/InstagramIcon';
+
+import { animateScroll as scroll, scroller } from 'react-scroll';
 
 const styles = theme => ({});
 
@@ -26,6 +28,7 @@ class Menu extends React.Component {
     this.state = {
       right: false,
     };
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   toggleDrawer = (side, open) => () => {
@@ -51,31 +54,44 @@ class Menu extends React.Component {
     this.props.handleChangeTabValueProp(tabValue);
   }
 
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
+
+  scrollTo(string) {
+    scroller.scrollTo(string, {
+      duration: 500,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: -100
+    });
+  }
+
   render() {
     const { classes } = this.props;
 
     const sideList = (
       <div className={classes.list}>
         <List>
-          <ListItem button className="list-item-button">
+          <ListItem onClick={(e) => this.scrollTo('About')} button className="list-item-button">
             <ListItemIcon>
               <AccountIcon color="rgba(0, 0, 0, 0.54)" />
             </ListItemIcon>
             <ListItemText primary="About" />
           </ListItem>
-          <ListItem onClick={(e) => this.handleTabChange(0)} button className="list-item-button">
+          <ListItem onClick={(e) => {this.handleTabChange(0); this.scrollTo('SwipeableView')}} button className="list-item-button">
             <ListItemIcon>
-              <ArchiveIcon color="rgba(0, 0, 0, 0.54)" />
+              <LaptopIcon color="rgba(0, 0, 0, 0.54)" />
             </ListItemIcon>
             <ListItemText primary="Work" />
           </ListItem>
-          <ListItem onClick={(e) => this.handleTabChange(1)} button className="list-item-button">
+          <ListItem onClick={(e) => {this.handleTabChange(1); this.scrollTo('SwipeableView')}} button className="list-item-button">
             <ListItemIcon>
-              <SchoolIcon color="rgba(0, 0, 0, 0.54)" />
+              <StarIcon color="rgba(0, 0, 0, 0.54)" />
             </ListItemIcon>
             <ListItemText primary="Skills" />
           </ListItem>
-          <ListItem onClick={(e) => this.handleTabChange(2)} button className="list-item-button">
+          <ListItem onClick={(e) => {this.handleTabChange(2); this.scrollTo('SwipeableView')}} button className="list-item-button">
             <ListItemIcon>
               <CameraIcon color="rgba(0, 0, 0, 0.54)" />
             </ListItemIcon>
@@ -89,25 +105,30 @@ class Menu extends React.Component {
           </ListItem>
 
           <Divider className="menu-divider" />
-
-          <ListItem button className="list-item-button">
-            <ListItemIcon>
-              <FacebookBoxIcon color="rgba(0, 0, 0, 0.54)" />
-            </ListItemIcon>
-            <ListItemText primary="Facebook" />
-          </ListItem>
-          <ListItem button className="list-item-button">
-            <ListItemIcon>
-              <GithubIcon color="rgba(0, 0, 0, 0.54)" />
-            </ListItemIcon>
-            <ListItemText primary="GitHub" />
-          </ListItem>
-          <ListItem button className="list-item-button">
-            <ListItemIcon>
-              <InstagramIcon color="rgba(0, 0, 0, 0.54)" />
-            </ListItemIcon>
-            <ListItemText primary="Instagram" />
-          </ListItem>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/kanyo.daniel">
+            <ListItem button className="list-item-button">
+              <ListItemIcon>
+                <FacebookBoxIcon color="rgba(0, 0, 0, 0.54)" />
+              </ListItemIcon>
+              <ListItemText primary="Facebook" />
+            </ListItem>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/DanielKanyo">
+            <ListItem button className="list-item-button">
+              <ListItemIcon>
+                <GithubIcon color="rgba(0, 0, 0, 0.54)" />
+              </ListItemIcon>
+              <ListItemText primary="GitHub" />
+            </ListItem>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/daniel_kanyo/">
+            <ListItem button className="list-item-button">
+              <ListItemIcon>
+                <InstagramIcon color="rgba(0, 0, 0, 0.54)" />
+              </ListItemIcon>
+              <ListItemText primary="Instagram" />
+            </ListItem>
+          </a>
         </List>
       </div>
     );

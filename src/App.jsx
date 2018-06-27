@@ -61,6 +61,7 @@ class App extends Component {
         <Header
           handleToggleDrawer={this.toggleDrawer.bind(this)}
           headerStyleProp={this.state.headerStyle}
+          handleChangeTabValueProp={this.changeTabValue.bind(this)}
         />
         <Content 
           tabValueProp={this.state.tabValue} 

@@ -6,9 +6,14 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import ArchiveIcon from 'mdi-react/ArchiveIcon';
-import SchoolIcon from 'mdi-react/SchoolIcon';
+import LaptopIcon from 'mdi-react/LaptopIcon';
+import StarIcon from 'mdi-react/StarIcon';
 import CameraIcon from 'mdi-react/CameraIcon';
+
+import Work from './Work';
+import Skills from './Skills';
+import Hobbie from './Hobbie';
+
 import '../App.css';
 
 function TabContainer({ children, dir }) {
@@ -37,6 +42,10 @@ class SwipeableView extends Component {
     this.props.handleChangeTabValueProp(tabValue);
   };
 
+  handleChangeIndex = (tabValue) => {
+    this.props.handleChangeTabValueProp(tabValue);
+  };
+
   render() {
     const { classes, theme } = this.props;
     return (
@@ -51,18 +60,25 @@ class SwipeableView extends Component {
               textColor="primary"
               fullWidth
             >
-              <Tab label="Work" icon={<ArchiveIcon />} />
-              <Tab label="Skills" icon={<SchoolIcon />} />
+              <Tab label="Work" icon={<LaptopIcon />} />
+              <Tab label="Skills" icon={<StarIcon />} />
               <Tab label="Hobbie" icon={<CameraIcon />} />
             </Tabs>
           </AppBar>
           <SwipeableViews
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
             index={this.props.tabValueProp}
+            onChangeIndex={this.handleChangeIndex}
           >
-            <TabContainer dir={theme.direction}>Item One</TabContainer>
-            <TabContainer dir={theme.direction}>Item Two</TabContainer>
-            <TabContainer dir={theme.direction}>Item Three</TabContainer>
+            <TabContainer dir={theme.direction}>
+              <Work />
+            </TabContainer>
+            <TabContainer dir={theme.direction}>
+              <Skills />
+            </TabContainer>
+            <TabContainer dir={theme.direction}>
+              <Hobbie />
+            </TabContainer>
           </SwipeableViews>
         </div>
       </div>

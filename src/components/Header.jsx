@@ -48,7 +48,7 @@ class Header extends Component {
 
   scrollTo(string) {
     scroller.scrollTo(string, {
-      duration: 300,
+      duration: 500,
       delay: 0,
       smooth: 'easeInOutQuart',
       offset: -100
@@ -57,6 +57,10 @@ class Header extends Component {
 
   handleToggleDrawer(side, open, e) {
     this.props.handleToggleDrawer(side, open);
+  }
+
+  handleTabChange(val) {
+    this.props.handleChangeTabValueProp(val);
   }
 
   render() {
@@ -69,27 +73,42 @@ class Header extends Component {
               <Typography variant="title" color="inherit" className={classes.flex} >
                 {/* <span className={"header-text-" + this.props.headerStyleProp.class}>Welcome</span> */}
                 <div className="header-navigation">
-                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('About')}>
+                  <Button 
+                    className={"nav-icon-" + this.props.headerStyleProp.class} 
+                    onClick={(e) => this.scrollTo('About')}
+                  >
                     <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
                       About Me
                     </span>
                   </Button>
-                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('SwipeableView')}>
+                  <Button 
+                    className={"nav-icon-" + this.props.headerStyleProp.class} 
+                    onClick={(e) => {this.scrollTo('SwipeableView'); this.handleTabChange(0)}}
+                  >
                     <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
                       Projects
                     </span>
                   </Button>
-                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('SwipeableView')}>
+                  <Button 
+                    className={"nav-icon-" + this.props.headerStyleProp.class} 
+                    onClick={(e) => {this.scrollTo('SwipeableView'); this.handleTabChange(1)}}
+                  >
                     <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
                       Skills
                     </span>
                   </Button>
-                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('SwipeableView')}>
+                  <Button 
+                    className={"nav-icon-" + this.props.headerStyleProp.class} 
+                    onClick={(e) => {this.scrollTo('SwipeableView'); this.handleTabChange(2)}}
+                  >
                     <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
                       Hobbie
                     </span>
                   </Button>
-                  <Button className={"nav-icon-" + this.props.headerStyleProp.class} onClick={(e) => this.scrollTo('About')}>
+                  <Button 
+                    className={"nav-icon-" + this.props.headerStyleProp.class} 
+                    onClick={(e) => this.scrollTo('About')}
+                  >
                     <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
                       Contact
                     </span>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import About from './About';
 import SwipeableView from './SwipeableView';
+import Contact from './Contact';
 import '../App.css';
 
 class Content extends Component {
@@ -18,6 +19,7 @@ class Content extends Component {
               tabValueProp={this.props.tabValueProp} 
               handleChangeTabValueProp={this.handleChangeTabValue.bind(this)} 
             />
+            <Contact />
         </div>
       </div>
     );
