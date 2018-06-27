@@ -47,6 +47,10 @@ class Menu extends React.Component {
     this.props.onRef(undefined)
   }
 
+  handleTabChange(tabValue) {
+    this.props.handleChangeTabValueProp(tabValue);
+  }
+
   render() {
     const { classes } = this.props;
 
@@ -59,19 +63,19 @@ class Menu extends React.Component {
             </ListItemIcon>
             <ListItemText primary="About" />
           </ListItem>
-          <ListItem button className="list-item-button">
+          <ListItem onClick={(e) => this.handleTabChange(0)} button className="list-item-button">
             <ListItemIcon>
               <ArchiveIcon color="rgba(0, 0, 0, 0.54)" />
             </ListItemIcon>
             <ListItemText primary="Work" />
           </ListItem>
-          <ListItem button className="list-item-button">
+          <ListItem onClick={(e) => this.handleTabChange(1)} button className="list-item-button">
             <ListItemIcon>
               <SchoolIcon color="rgba(0, 0, 0, 0.54)" />
             </ListItemIcon>
             <ListItemText primary="Skills" />
           </ListItem>
-          <ListItem button className="list-item-button">
+          <ListItem onClick={(e) => this.handleTabChange(2)} button className="list-item-button">
             <ListItemIcon>
               <CameraIcon color="rgba(0, 0, 0, 0.54)" />
             </ListItemIcon>

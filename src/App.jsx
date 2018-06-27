@@ -12,11 +12,13 @@ class App extends Component {
       headerStyle: {
         color: 'white',
         class: 'transparent'
-      }
+      },
+      tabValue: 1
     };
 
     this.handleScroll = this.handleScroll.bind(this);
     this.toggleDrawer = this.toggleDrawer.bind(this);
+    this.changeTabValue = this.changeTabValue.bind(this);
   }
 
   componentDidMount() {
@@ -49,6 +51,10 @@ class App extends Component {
     this.child.toggleMenu(side, open) // do stuff
   }
 
+  changeTabValue(tabValue) {
+    this.setState({ tabValue: tabValue });
+  }
+
   render() {
     return (
       <div className="App">
@@ -56,8 +62,14 @@ class App extends Component {
           handleToggleDrawer={this.toggleDrawer.bind(this)}
           headerStyleProp={this.state.headerStyle}
         />
-        <Content />
-        <Menu onRef={ref => (this.child = ref)} />
+        <Content 
+          tabValueProp={this.state.tabValue} 
+          handleChangeTabValueProp={this.changeTabValue.bind(this)} 
+        />
+        <Menu 
+          onRef={ref => (this.child = ref)} 
+          handleChangeTabValueProp={this.changeTabValue.bind(this)} 
+        />
       </div>
     );
   }

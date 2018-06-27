@@ -33,16 +33,8 @@ const styles = theme => ({
 
 class SwipeableView extends Component {
 
-  state = {
-    value: 1,
-  };
-
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
-
-  handleChangeIndex = index => {
-    this.setState({ value: index });
+  handleChange = (event, tabValue) => {
+    this.props.handleChangeTabValueProp(tabValue);
   };
 
   render() {
@@ -53,7 +45,7 @@ class SwipeableView extends Component {
           <AppBar position="static" color="default">
             <Tabs
               className="swipeable-view-tabs"
-              value={this.state.value}
+              value={this.props.tabValueProp}
               onChange={this.handleChange}
               indicatorColor="primary"
               textColor="primary"
@@ -66,8 +58,7 @@ class SwipeableView extends Component {
           </AppBar>
           <SwipeableViews
             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-            index={this.state.value}
-            onChangeIndex={this.handleChangeIndex}
+            index={this.props.tabValueProp}
           >
             <TabContainer dir={theme.direction}>Item One</TabContainer>
             <TabContainer dir={theme.direction}>Item Two</TabContainer>
