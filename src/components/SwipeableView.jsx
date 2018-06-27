@@ -59,7 +59,7 @@ class SwipeableView extends Component {
               textColor="primary"
               fullWidth
             >
-              <Tab label="Projects" icon={<ArchiveIcon />} />
+              <Tab label="Work" icon={<ArchiveIcon />} />
               <Tab label="Skills" icon={<SchoolIcon />} />
               <Tab label="Hobbie" icon={<CameraIcon />} />
             </Tabs>

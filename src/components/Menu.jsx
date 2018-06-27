@@ -63,7 +63,7 @@ class Menu extends React.Component {
             <ListItemIcon>
               <ArchiveIcon color="rgba(0, 0, 0, 0.54)" />
             </ListItemIcon>
-            <ListItemText primary="Projects" />
+            <ListItemText primary="Work" />
           </ListItem>
           <ListItem button className="list-item-button">
             <ListItemIcon>

@@ -184,16 +184,20 @@
 .SwipeableView header {
   background: none !important;
   box-shadow: none !important;
-  max-width: 400px;
+  max-width: 315px;
   margin: 0 auto;
 }
 
 .SwipeableView button {
-  max-width: none !important;
+  width: 95px !important;
   min-width: 60px !important;
   border-radius: 3px !important;
-  margin: 15px 5px;
+  margin: 15px 10px;
   min-height: 90px !important;
+}
+
+.MuiTab-fullWidth-122 {
+  flex-grow: inherit !important;
 }
 
 .MuiTab-textColorPrimary-118 svg {
@@ -204,7 +208,7 @@
 .MuiTab-textColorPrimary-118.MuiTab-selected-120 {
   color: white !important; 
   background: #4286f4 !important;
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 4px 13px 0px rgba(0, 0, 0, 0.24), 0 7px 10px -5px rgba(0, 0, 0, 0.24);
 }
 
 .MuiTab-textColorPrimary-118.MuiTab-selected-120 svg {
