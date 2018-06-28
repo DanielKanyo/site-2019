@@ -21,8 +21,8 @@ class Skills extends Component {
     return (
       <div className="Skills">
         <div className={"tab-container " + classes.root}>
-          <Grid container spacing={8}>
-          <Grid item xs={12} >
+          <Grid container spacing={16}>
+            <Grid item xs={12} sm={6}>
               <div className="tab-container-grid">
                 Front-end
               </div>
@@ -35,6 +35,11 @@ class Skills extends Component {
             <Grid item xs={12} sm={6}>
               <div className="tab-container-grid">
                 DevOps
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <div className="tab-container-grid">
+                Other
               </div>
             </Grid>
           </Grid>
