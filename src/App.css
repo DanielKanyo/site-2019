@@ -212,7 +212,7 @@
 
 .MuiTab-fullWidth-122 {
   flex-grow: inherit !important;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .MuiTab-textColorPrimary-118 svg {
@@ -224,7 +224,7 @@
   color: white !important;
   background: #4286f4 !important;
   box-shadow: 0 4px 13px 0px rgba(0, 0, 0, 0.24), 0 7px 10px -5px rgba(0, 0, 0, 0.24);
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .MuiTab-textColorPrimary-118.MuiTab-selected-120 svg {
@@ -246,7 +246,7 @@
 .Work,
 .Skills,
 .Hobbie {
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 .tab-container {
@@ -256,7 +256,52 @@
 .tab-container-grid {
   height: auto;
   border-radius: 3px;
-  background: red;
+}
+
+.card-content {
+  padding: 14px 10px 9px 14px !important;
+  min-height: 111px !important;
+}
+
+.favourite-text {
+  float: left;
+  padding-left: 20px;
+  line-height: 60px;
+  color: white;
+}
+
+.favourite-icon {
+  float: right;
+  padding-right: 20px;
+  height: 60px;
+}
+
+.favourite-icon svg {
+  height: 60px;
+}
+
+.skill-avatar-letter {
+  color: white !important;
+}
+
+.learn-more-menu ul {
+  padding: 0px !important;
+}
+
+.front-end-fav {
+  background: #18bc6a;
+}
+
+.back-end-fav {
+  background: #ab51e8;
+}
+
+.devops-fav {
+  background: #ff713d;
+}
+
+.others-fav {
+  background: #43cbe0;
 }
 
 @media screen and (max-width: 580px) {
@@ -301,5 +346,12 @@
 @media screen and (max-width: 700px) {
   .content-about-text {
     padding: 15px 20px 30px 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .sw-grid {
+    max-width: 100% !important;
+    flex-basis: 100% !important;
   }
 }

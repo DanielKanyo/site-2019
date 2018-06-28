@@ -107,7 +107,7 @@ class Header extends Component {
                   </Button>
                   <Button 
                     className={"nav-icon-" + this.props.headerStyleProp.class} 
-                    onClick={(e) => this.scrollTo('About')}
+                    onClick={(e) => this.scrollTo('Contact')}
                   >
                     <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
                       Contact

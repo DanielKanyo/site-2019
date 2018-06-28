@@ -5,12 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import Avatar from '@material-ui/core/Avatar';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import IconButton from '@material-ui/core/IconButton';
+import Chip from '@material-ui/core/Chip';
+import HeartIcon from 'mdi-react/HeartIcon';
 import '../App.css';
 
 const styles = theme => ({
@@ -22,12 +19,12 @@ const styles = theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
-  card: {
-
-  },
-  media: {
+  favourite: {
     height: '60px',
-    backgroundColor: '#52ce8e'
+    position: 'relative'
+  },
+  chip: {
+    margin: '0px 5px 5px 0px',
   },
 });
 
@@ -38,7 +35,7 @@ class Skills extends Component {
       <div className="Skills">
         <div className={"tab-container " + classes.root}>
           <Grid container spacing={16}>
-            <Grid item xs={12} sm={6}>
+            <Grid className="sw-grid" item xs={12} sm={6}>
               <div className="tab-container-grid">
                 <Card className={classes.card}>
                   <CardHeader
@@ -47,47 +44,191 @@ class Skills extends Component {
                         FE
                       </Avatar>
                     }
-                    action={
-                      <IconButton>
-                        <MoreVertIcon />
-                      </IconButton>
-                    }
                     title="Front-end"
                   />
-                  <div className={classes.media}></div>
-                  <CardContent>
-                    <Typography gutterBottom variant="headline" component="h2">
-                      Lizard
-                    </Typography>
-                    <Typography component="p">
-                      Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                      across all continents except Antarctica
-                    </Typography>
+                  <div className={classes.favourite + " front-end-fav"}>
+                    <div className="favourite-text">
+                      REACT.JS
+                    </div>
+                    <div className="favourite-icon">
+                      <HeartIcon color="white" />
+                    </div>
+                  </div>
+                  <CardContent className="card-content">
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">H</Avatar>}
+                      label="HTML5"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">CS</Avatar>}
+                      label="CSS3"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">JS</Avatar>}
+                      label="Java Script"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">JQ</Avatar>}
+                      label="JQuery"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">R</Avatar>}
+                      label="React.js"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">BS</Avatar>}
+                      label="Bootstrap"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">RN</Avatar>}
+                      label="React Native"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">M</Avatar>}
+                      label="Material"
+                      className={classes.chip}
+                    />
                   </CardContent>
-                  <CardActions>
-                    <Button className="card-button" size="small" color="primary">
-                      Share
-                    </Button>
-                    <Button className="card-button" size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </CardActions>
                 </Card>
               </div>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid className="sw-grid" item xs={12} sm={6}>
               <div className="tab-container-grid">
-                Back-end
+                <Card className={classes.card}>
+                  <CardHeader
+                    avatar={
+                      <Avatar aria-label="Recipe" className={classes.avatar}>
+                        BE
+                      </Avatar>
+                    }
+                    title="Back-end"
+                  />
+                  <div className={classes.favourite + " back-end-fav"}>
+                    <div className="favourite-text">
+                      NODE.JS
+                    </div>
+                    <div className="favourite-icon">
+                      <HeartIcon color="white" />
+                    </div>
+                  </div>
+                  <CardContent className="card-content">
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">N</Avatar>}
+                      label="Node.js"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">J</Avatar>}
+                      label="Java"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">P</Avatar>}
+                      label="Php"
+                      className={classes.chip}
+                    />
+                  </CardContent>
+                </Card>
               </div>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid className="sw-grid" item xs={12} sm={6}>
               <div className="tab-container-grid">
-                DevOps
+                <Card className={classes.card}>
+                  <CardHeader
+                    avatar={
+                      <Avatar aria-label="Recipe" className={classes.avatar}>
+                        DO
+                      </Avatar>
+                    }
+                    title="DevOps"
+                  />
+                  <div className={classes.favourite + " devops-fav"}>
+                    <div className="favourite-text">
+                      JENKINS
+                    </div>
+                    <div className="favourite-icon">
+                      <HeartIcon color="white" />
+                    </div>
+                  </div>
+                  <CardContent className="card-content">
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">J</Avatar>}
+                      label="Jenkins"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">D</Avatar>}
+                      label="Docker"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">SS</Avatar>}
+                      label="Shell Script"
+                      className={classes.chip}
+                    />
+                  </CardContent>
+                </Card>
               </div>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid className="sw-grid" item xs={12} sm={6}>
               <div className="tab-container-grid">
-                Other
+                <Card className={classes.card}>
+                  <CardHeader
+                    avatar={
+                      <Avatar aria-label="Recipe" className={classes.avatar}>
+                        OT
+                      </Avatar>
+                    }
+                    title="Other"
+                  />
+                  <div className={classes.favourite + " others-fav"}>
+                    <div className="favourite-text">
+                      LINUX
+                    </div>
+                    <div className="favourite-icon">
+                      <HeartIcon color="white" />
+                    </div>
+                  </div>
+                  <CardContent className="card-content">
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">L</Avatar>}
+                      label="Linux"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">G</Avatar>}
+                      label="Git"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">MD</Avatar>}
+                      label="MongoDB"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">UX</Avatar>}
+                      label="UX Design"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">NS</Avatar>}
+                      label="Non-Smoking"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">DL</Avatar>}
+                      label="Driving Licence"
+                      className={classes.chip}
+                    />
+                  </CardContent>
+                </Card>
               </div>
             </Grid>
           </Grid>
