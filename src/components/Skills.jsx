@@ -14,6 +14,7 @@ import ReactIcon from 'mdi-react/ReactIcon';
 import DockerIcon from 'mdi-react/DockerIcon';
 import IconButton from '@material-ui/core/IconButton';
 import InformationVariantIcon from 'mdi-react/InformationVariantIcon';
+import Tooltip from '@material-ui/core/Tooltip';
 import '../App.css';
 
 const styles = theme => ({
@@ -51,11 +52,13 @@ class Skills extends Component {
                       </Avatar>
                     }
                     action={
-                      <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Front_and_back_ends">
-                        <IconButton className="information-button">
-                          <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
-                        </IconButton>
-                      </a>
+                      <Tooltip id="tooltip-left" title="More..." placement="left">
+                        <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Front_and_back_ends">
+                          <IconButton className="information-button">
+                            <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
+                          </IconButton>
+                        </a>
+                      </Tooltip>
                     }
                     title="Front-end"
                   />
@@ -125,11 +128,13 @@ class Skills extends Component {
                       </Avatar>
                     }
                     action={
-                      <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Front_and_back_ends">
-                        <IconButton className="information-button">
-                          <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
-                        </IconButton>
-                      </a>
+                      <Tooltip id="tooltip-left" title="More..." placement="left">
+                        <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Front_and_back_ends">
+                          <IconButton className="information-button">
+                            <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
+                          </IconButton>
+                        </a>
+                      </Tooltip>
                     }
                     title="Back-end"
                   />
@@ -174,11 +179,13 @@ class Skills extends Component {
                       </Avatar>
                     }
                     action={
-                      <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/DevOps">
-                        <IconButton className="information-button">
-                          <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
-                        </IconButton>
-                      </a>
+                      <Tooltip id="tooltip-left" title="More..." placement="left">
+                        <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/DevOps">
+                          <IconButton className="information-button">
+                            <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
+                          </IconButton>
+                        </a>
+                      </Tooltip>
                     }
                     title="DevOps"
                   />
