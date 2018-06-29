@@ -243,12 +243,6 @@
   background: #8a8a8a;
 }
 
-.Work,
-.Skills,
-.Hobbie {
-  pointer-events: none;
-}
-
 .tab-container {
   height: auto;
 }
@@ -265,18 +259,28 @@
 
 .favourite-text {
   float: left;
-  padding-left: 20px;
+  padding-left: 12px;
   line-height: 60px;
   color: white;
 }
 
-.favourite-icon {
+.favourite-icon-right {
   float: right;
   padding-right: 20px;
   height: 60px;
 }
 
-.favourite-icon svg {
+.favourite-icon-right svg {
+  height: 60px;
+}
+
+.favourite-icon-left {
+  float: left;
+  padding-left: 20px;
+  height: 60px;
+}
+
+.favourite-icon-left svg {
   height: 60px;
 }
 
@@ -289,23 +293,28 @@
 }
 
 .front-end-fav {
-  background: #18bc6a;
+  background: #53c1de;
 }
 
 .back-end-fav {
-  background: #ab51e8;
+  background: #90c53f;
 }
 
 .devops-fav {
-  background: #ff713d;
+  background: #066da5;
 }
 
 .others-fav {
-  background: #43cbe0;
+  background: #de4815;
 }
 
 .information-button {
   pointer-events: auto;
+}
+
+.MuiTypography-root-41[dir="ltr"] {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
 @media screen and (max-width: 580px) {
@@ -330,6 +339,10 @@
   .content-about-text {
     padding: 20px 50px 30px 50px;
   }
+  .sw-grid {
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -345,17 +358,15 @@
   .header-navigation {
     display: none !important;
   }
+  .Work,
+  .Skills,
+  .Hobbie {
+    pointer-events: none;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .content-about-text {
     padding: 15px 20px 30px 20px;
-  }
-}
-
-@media (max-width: 1100px) {
-  .sw-grid {
-    max-width: 100% !important;
-    flex-basis: 100% !important;
   }
 }

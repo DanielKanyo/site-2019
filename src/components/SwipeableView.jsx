@@ -73,10 +73,10 @@ class SwipeableView extends Component {
             <TabContainer dir={theme.direction}>
               <Work />
             </TabContainer>
-            <TabContainer dir={theme.direction}>
+            <TabContainer className="sw-tab-container" dir={theme.direction}>
               <Skills />
             </TabContainer>
-            <TabContainer dir={theme.direction}>
+            <TabContainer className="sw-tab-container" dir={theme.direction}>
               <Hobbie />
             </TabContainer>
           </SwipeableViews>

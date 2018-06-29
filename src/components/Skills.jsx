@@ -8,6 +8,10 @@ import Avatar from '@material-ui/core/Avatar';
 import CardContent from '@material-ui/core/CardContent';
 import Chip from '@material-ui/core/Chip';
 import HeartIcon from 'mdi-react/HeartIcon';
+import LinuxIcon from 'mdi-react/LinuxIcon';
+import NodejsIcon from 'mdi-react/NodejsIcon';
+import ReactIcon from 'mdi-react/ReactIcon';
+import DockerIcon from 'mdi-react/DockerIcon';
 import IconButton from '@material-ui/core/IconButton';
 import InformationVariantIcon from 'mdi-react/InformationVariantIcon';
 import '../App.css';
@@ -56,10 +60,13 @@ class Skills extends Component {
                     title="Front-end"
                   />
                   <div className={classes.favourite + " front-end-fav"}>
+                    <div className="favourite-icon-left">
+                      <ReactIcon color="white" />
+                    </div>
                     <div className="favourite-text">
                       REACT.JS
                     </div>
-                    <div className="favourite-icon">
+                    <div className="favourite-icon-right">
                       <HeartIcon color="white" />
                     </div>
                   </div>
@@ -127,10 +134,13 @@ class Skills extends Component {
                     title="Back-end"
                   />
                   <div className={classes.favourite + " back-end-fav"}>
+                    <div className="favourite-icon-left">
+                      <NodejsIcon color="white" />
+                    </div>
                     <div className="favourite-text">
                       NODE.JS
                     </div>
-                    <div className="favourite-icon">
+                    <div className="favourite-icon-right">
                       <HeartIcon color="white" />
                     </div>
                   </div>
@@ -173,10 +183,13 @@ class Skills extends Component {
                     title="DevOps"
                   />
                   <div className={classes.favourite + " devops-fav"}>
-                    <div className="favourite-text">
-                      JENKINS
+                    <div className="favourite-icon-left">
+                      <DockerIcon color="white" />
                     </div>
-                    <div className="favourite-icon">
+                    <div className="favourite-text">
+                      DOCKER
+                    </div>
+                    <div className="favourite-icon-right">
                       <HeartIcon color="white" />
                     </div>
                   </div>
@@ -212,10 +225,13 @@ class Skills extends Component {
                     title="Other"
                   />
                   <div className={classes.favourite + " others-fav"}>
+                    <div className="favourite-icon-left">
+                      <LinuxIcon color="white" />
+                    </div>
                     <div className="favourite-text">
                       LINUX
                     </div>
-                    <div className="favourite-icon">
+                    <div className="favourite-icon-right">
                       <HeartIcon color="white" />
                     </div>
                   </div>
@@ -233,6 +249,11 @@ class Skills extends Component {
                     <Chip
                       avatar={<Avatar className="skill-avatar-letter">MD</Avatar>}
                       label="MongoDB"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">MS</Avatar>}
+                      label="MySQL"
                       className={classes.chip}
                     />
                     <Chip
