@@ -8,6 +8,8 @@ import Avatar from '@material-ui/core/Avatar';
 import CardContent from '@material-ui/core/CardContent';
 import Chip from '@material-ui/core/Chip';
 import HeartIcon from 'mdi-react/HeartIcon';
+import IconButton from '@material-ui/core/IconButton';
+import InformationVariantIcon from 'mdi-react/InformationVariantIcon';
 import '../App.css';
 
 const styles = theme => ({
@@ -43,6 +45,13 @@ class Skills extends Component {
                       <Avatar aria-label="Recipe" className={classes.avatar}>
                         FE
                       </Avatar>
+                    }
+                    action={
+                      <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Front_and_back_ends">
+                        <IconButton className="information-button">
+                          <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
+                        </IconButton>
+                      </a>
                     }
                     title="Front-end"
                   />
@@ -108,6 +117,13 @@ class Skills extends Component {
                         BE
                       </Avatar>
                     }
+                    action={
+                      <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Front_and_back_ends">
+                        <IconButton className="information-button">
+                          <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
+                        </IconButton>
+                      </a>
+                    }
                     title="Back-end"
                   />
                   <div className={classes.favourite + " back-end-fav"}>
@@ -146,6 +162,13 @@ class Skills extends Component {
                       <Avatar aria-label="Recipe" className={classes.avatar}>
                         DO
                       </Avatar>
+                    }
+                    action={
+                      <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/DevOps">
+                        <IconButton className="information-button">
+                          <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
+                        </IconButton>
+                      </a>
                     }
                     title="DevOps"
                   />
