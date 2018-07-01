@@ -101,6 +101,7 @@
 
 .content-placeholder {
   margin-bottom: 50px;
+  z-index: 99;
   position: relative;
   background: white;
   margin-top: -120px;
@@ -312,6 +313,15 @@
   pointer-events: auto;
 }
 
+.Footer {
+  width: calc(100% - 70px - 15%);
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 20px;
+  color: #5f5f5f;
+  padding: 10px 15%;
+}
+
 .MuiTypography-root-41[dir="ltr"] {
   padding-left: 10px !important;
   padding-right: 10px !important;
@@ -326,6 +336,10 @@
   }
   .content-placeholder {
     padding: 0px 10px;
+  }
+  .Footer {
+    width: calc(100% - 20px);
+    padding: 10px 20px;
   }
 }
 
