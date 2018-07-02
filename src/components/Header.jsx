@@ -117,17 +117,17 @@ class Header extends Component {
               </Typography>
               <div className="social-menu-line">
                 <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/kanyo.daniel">
-                  <Button className="social-icon">
+                  <Button className={"social-icon-" + this.props.headerStyleProp.class}>
                     <FacebookBoxIcon color={this.props.headerStyleProp.color} />
                   </Button>
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/DanielKanyo">
-                  <Button className="social-icon">
+                  <Button className={"social-icon-" + this.props.headerStyleProp.class}>
                     <GithubIcon color={this.props.headerStyleProp.color} />
                   </Button>
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/daniel_kanyo/">
-                  <Button className="social-icon">
+                  <Button className={"social-icon-" + this.props.headerStyleProp.class}>
                     <InstagramIcon color={this.props.headerStyleProp.color} />
                   </Button>
                 </a>

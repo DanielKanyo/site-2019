@@ -1,14 +1,29 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 import '../App.css';
+
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  button: {
+    margin: theme.spacing.unit,
+  },
+});
 
 class Footer extends Component {
   render() {
     return (
       <div className="Footer">
-        {"© " + new Date().getFullYear()}
+        {"Copyright © " + new Date().getFullYear()}
       </div>
     );
   }
 }
 
-export default Footer;
+Footer.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Footer);

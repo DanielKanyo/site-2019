@@ -27,15 +27,26 @@
   background-position: center center;
 }
 
-.social-icon {
+.social-icon-transparent {
   margin-left: 8px !important;
   border-radius: 3px !important;
   min-width: 50px !important;
-  padding: 8px 13px !important;
+  padding: 12px 13px !important;
 }
 
-.social-icon:hover {
+.social-icon-transparent:hover {
   background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.social-icon-light {
+  margin-left: 8px !important;
+  border-radius: 3px !important;
+  min-width: 50px !important;
+  padding: 12px 13px !important;
+}
+
+.social-icon-light:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
 }
 
 .menu-btn-transparent {
@@ -96,11 +107,12 @@
 
 .Content {
   padding: 35px;
+  padding-bottom: 25px;
   background: #ddd;
 }
 
 .content-placeholder {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   z-index: 99;
   position: relative;
   background: white;
@@ -314,17 +326,22 @@
 }
 
 .Footer {
-  width: calc(100% - 70px - 15%);
-  position: fixed;
+  width: 100%;
+  padding: 10px 0px;
   bottom: 0;
-  margin-bottom: 20px;
   color: #5f5f5f;
-  padding: 10px 15%;
+  text-align: center;
 }
 
 .MuiTypography-root-41[dir="ltr"] {
   padding-left: 10px !important;
   padding-right: 10px !important;
+}
+
+.hobbie-pic-container {
+  min-height: 266px;
+  background: pink;
+  border-radius: 3px;
 }
 
 @media screen and (max-width: 580px) {
@@ -333,12 +350,13 @@
   }
   .Content {
     padding: 20px;
+    padding-bottom: 15px;
   }
   .content-placeholder {
     padding: 0px 10px;
   }
   .Footer {
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     padding: 10px 20px;
   }
 }
