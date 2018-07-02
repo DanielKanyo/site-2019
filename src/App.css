@@ -340,8 +340,17 @@
 
 .hobbie-pic-container {
   min-height: 266px;
+  max-width: 400px;
+  margin: 0 auto;
   background: pink;
   border-radius: 3px;
+}
+
+.hobbie-pic1 {
+  background-image: url("./images/trixi.jpeg");
+  background-position: 50% 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 580px) {
@@ -380,6 +389,9 @@
 @media screen and (max-width: 1000px) {
   .menu-btn-transparent {
     display: block !important;
+  }
+  .Header h2 {
+    display: none !important;
   }
   .menu-btn-light {
     display: block !important;

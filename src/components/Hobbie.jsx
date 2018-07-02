@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import '../App.css';
 
 const styles = theme => ({
@@ -17,24 +18,24 @@ class Hobbie extends Component {
         <div className="tab-container">
           <Grid container spacing={16}>
             <Grid className="sw-grid" item xs={12} sm={6}>
-              <div className="hobbie-pic-container hobbie-pic1">
-                
-              </div>
+              <Paper elevation={2}>
+                <div className="hobbie-pic-container hobbie-pic1"></div>
+              </Paper>
             </Grid>
             <Grid className="sw-grid" item xs={12} sm={6}>
-              <div className="hobbie-pic-container hobbie-pic2">
-                
-              </div>
+              <Paper elevation={2}>
+                <div className="hobbie-pic-container hobbie-pic2"></div>
+              </Paper>
             </Grid>
             <Grid className="sw-grid" item xs={12} sm={6}>
-              <div className="hobbie-pic-container hobbie-pic3">
-                
-              </div>
+              <Paper elevation={2}>
+                <div className="hobbie-pic-container hobbie-pic3"></div>
+              </Paper>
             </Grid>
             <Grid className="sw-grid" item xs={12} sm={6}>
-              <div className="hobbie-pic-container hobbie-pic4">
-                
-              </div>
+              <Paper elevation={2}>
+                <div className="hobbie-pic-container hobbie-pic4"></div>
+              </Paper>
             </Grid>
           </Grid>
         </div>

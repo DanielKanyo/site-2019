@@ -136,7 +136,7 @@ class Menu extends React.Component {
     return (
       <div>
         <SwipeableDrawer
-          anchor="right"
+          anchor="left"
           open={this.state.right}
           onClose={this.toggleDrawer('right', false)}
           onOpen={this.toggleDrawer('right', true)}
