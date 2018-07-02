@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import Drawer from '@material-ui/core/Drawer';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import List from '@material-ui/core/List';
@@ -32,6 +32,12 @@ class Menu extends React.Component {
   }
 
   toggleDrawer = (side, open) => () => {
+    let body = document.getElementsByTagName('body')[0];
+    
+    if (body.classList.length !== 0) {
+      body.classList.remove("body-overflow-hidden"); 
+    }
+
     this.setState({
       [side]: open,
     });
@@ -135,11 +141,10 @@ class Menu extends React.Component {
 
     return (
       <div>
-        <SwipeableDrawer
+        <Drawer
           anchor="left"
           open={this.state.right}
           onClose={this.toggleDrawer('right', false)}
-          onOpen={this.toggleDrawer('right', true)}
         >
           <div
             tabIndex={0}
@@ -149,7 +154,7 @@ class Menu extends React.Component {
           >
             {sideList}
           </div>
-        </SwipeableDrawer>
+        </Drawer>
       </div>
     );
   }

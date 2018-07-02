@@ -56,6 +56,11 @@ class Header extends Component {
   }
 
   handleToggleDrawer(side, open, e) {
+    let body = document.getElementsByTagName('body')[0];
+    if (body.classList.length === 0) {
+      body.classList.add("body-overflow-hidden"); 
+    }
+    
     this.props.handleToggleDrawer(side, open);
   }
 
