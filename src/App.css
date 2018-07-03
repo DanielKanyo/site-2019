@@ -2,7 +2,6 @@
   padding: 10px 10%;
   background: transparent !important;
   box-shadow: none !important;
-  transition: all 0.2s;
 }
 
 .app-bar-light {
@@ -11,7 +10,6 @@
   box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15) !important;
   border-bottom-left-radius: 3px !important;
   border-bottom-right-radius: 3px !important;
-  transition: all 0.2s;
 }
 
 .menu-divider {
@@ -225,7 +223,6 @@
 
 .MuiTab-fullWidth-122 {
   flex-grow: inherit !important;
-  transition: 0.2s;
 }
 
 .MuiTab-textColorPrimary-118 svg {
@@ -237,7 +234,6 @@
   color: white !important;
   background: #4286f4 !important;
   box-shadow: 0 4px 13px 0px rgba(0, 0, 0, 0.24), 0 7px 10px -5px rgba(0, 0, 0, 0.24);
-  transition: 0.2s;
 }
 
 .MuiTab-textColorPrimary-118.MuiTab-selected-120 svg {
@@ -348,6 +344,27 @@
 
 .hobbie-pic1 {
   background-image: url("./images/trixi.jpeg");
+  background-position: 50% 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.hobbie-pic2 {
+  background-image: url("./images/grass_2.png");
+  background-position: 50% 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.hobbie-pic3 {
+  background-image: url("./images/grass.png");
+  background-position: 50% 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.hobbie-pic4 {
+  background-image: url("./images/kiss.jpeg");
   background-position: 50% 50%;
   background-size: auto 100%;
   background-repeat: no-repeat;
