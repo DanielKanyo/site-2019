@@ -374,12 +374,130 @@
   max-height: 266px;
 }
 
+.work-project-container {
+  padding-bottom: 5px !important;
+}
+
+.work-project-learnmore {
+  float: right;
+  pointer-events: auto;
+}
+
+.work-image {
+  height: 165px;
+  width: 100%;
+  position: relative;
+}
+
+.cockpit-image {
+  background-image: url("./images/cockpit.jpg");
+  background-size: 100% auto;
+  background-position: auto 30%;
+}
+
+.kuechenmonitor-image {
+  background-image: url("./images/kuechenmonitor.jpg");
+  background-size: 100% auto;
+  background-position: 60% 40%;
+}
+
+.fishingtours-image {
+  background-image: url("./images/fish.jpg");
+  background-size: 100% auto;
+  background-position: 60% 50%;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.fishingtours-img-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #1f850c;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+
+.kuechenmonitor-img-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #034265;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+
+.work-image-logo-cockpit {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  right: 30px;
+  top: calc(50% - 50px);
+  background-image: url("./images/cockpit-logo.jpg");
+  background-size: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15) !important;
+}
+
+.work-image-logo-kuechenmonitor {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  right: 30px;
+  top: calc(50% - 50px);
+  background: #0a81c1;
+  background-size: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15) !important;
+  text-align: center;
+  line-height: 100px;
+  font-size: 70px;
+  color: white;
+}
+
+.work-image-logo-fishingtours {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 30px;
+  top: calc(50% - 50px);
+  background: #2da019;
+  background-size: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15) !important;
+  text-align: center;
+  line-height: 100px;
+  font-size: 70px;
+  color: white;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.cockpit-button {
+  color: #69b315 !important;
+}
+
+.kuechenmonitor-button {
+  color: #337ab7 !important;
+}
+
+.fishingtours-button {
+  color: #2da019 !important;
+}
+
+.work-project-title {
+  margin-bottom: 0px !important;
+}
+
 .body-overflow-hidden {
-  overflow: hidden !important;
+  overflow-y: hidden !important;
 }
 
 body {
-  overflow: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 580px) {

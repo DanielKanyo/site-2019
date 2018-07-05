@@ -6,22 +6,14 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import '../App.css';
 
-const styles = {
-  media: {
-    height: 0,
-    paddingTop: '146px',
-    backgroundColor: 'red'
-  },
-};
+const styles = {};
 
 class Work extends Component {
   render() {
-    const { classes } = this.props;
     return (
       <div className="Work">
         <Grid container spacing={16}>
@@ -29,23 +21,18 @@ class Work extends Component {
             <div className="tab-container-grid">
               <div className="work-paper work1">
                 <Card>
-                  <CardMedia
-                    className={classes.media}
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    title="Contemplative Reptile"
-                  />
-                  <CardContent>
-                      <Typography gutterBottom variant="headline" component="h2">
-                      Lizard
+                  <div className="work-image cockpit-image"><div className="work-image-logo-cockpit"></div></div>
+                  <CardContent className="work-project-container">
+                    <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
+                      Vinn Cockpit
                       </Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
+                  <CardActions className="work-project-learnmore">
+                    <a href="https://www.myvinn.com/en/hotel-technology/vinn-cockpit" target="_blank" rel="noopener noreferrer">
+                      <Button size="small" color="primary" className="work-project-learnmore-button cockpit-button">
+                        Learn More
                       </Button>
-                    <Button size="small" color="primary">
-                      Learn More
-                      </Button>
+                    </a>
                   </CardActions>
                 </Card>
               </div>
@@ -53,16 +40,50 @@ class Work extends Component {
           </Grid>
           <Grid className="sw-grid" item xs={12} sm={6}>
             <div className="tab-container-grid">
-              <Paper elevation={2}>
-                <div className="work-paper work2">Work2</div>
-              </Paper>
+              <div className="work-paper work2">
+                <Card>
+                  <div className="work-image kuechenmonitor-image">
+                    <div className="kuechenmonitor-img-color"></div>
+                    <div className="work-image-logo-kuechenmonitor">K</div>
+                  </div>
+                  <CardContent className="work-project-container">
+                    <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
+                      Küchenmonitor
+                    </Typography>
+                  </CardContent>
+                  <CardActions className="work-project-learnmore">
+                    <a href="https://kuechenmonitor.de/pages/index.html" target="_blank" rel="noopener noreferrer">
+                      <Button size="small" color="primary" className="work-project-learnmore-button kuechenmonitor-button">
+                        Learn More
+                      </Button>
+                    </a>
+                  </CardActions>
+                </Card>
+              </div>
             </div>
           </Grid>
           <Grid className="sw-grid" item xs={12} sm={6}>
             <div className="tab-container-grid">
-              <Paper elevation={2}>
-                <div className="work-paper work3">Work3</div>
-              </Paper>
+              <div className="work-paper work3">
+                <Card>
+                  <div className="work-image fishingtours-image">
+                    <div className="fishingtours-img-color"></div>
+                    <div className="work-image-logo-fishingtours">F</div>
+                  </div>
+                  <CardContent className="work-project-container">
+                    <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
+                      Fishingtours - Tisa
+                    </Typography>
+                  </CardContent>
+                  <CardActions className="work-project-learnmore">
+                    <a href="https://fishingtours-tisa.com/" target="_blank" rel="noopener noreferrer">
+                      <Button size="small" color="primary" className="work-project-learnmore-button fishingtours-button">
+                        Learn More
+                      </Button>
+                    </a>
+                  </CardActions>
+                </Card>
+              </div>
             </div>
           </Grid>
           <Grid className="sw-grid" item xs={12} sm={6}>
