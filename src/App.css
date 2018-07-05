@@ -338,7 +338,6 @@
   min-height: 266px;
   max-width: 400px;
   margin: 0 auto;
-  background: pink;
   border-radius: 3px;
 }
 
@@ -368,6 +367,11 @@
   background-position: 60% 50%;
   background-size: auto 100%;
   background-repeat: no-repeat;
+}
+
+.work-paper {
+  min-height: 266px;
+  max-height: 266px;
 }
 
 .body-overflow-hidden {

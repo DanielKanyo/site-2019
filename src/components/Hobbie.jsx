@@ -18,24 +18,24 @@ class Hobbie extends Component {
         <div className="tab-container">
           <Grid container spacing={16}>
             <Grid className="sw-grid" item xs={12} sm={6}>
-              <Paper elevation={2}>
-                <div className="hobbie-pic-container hobbie-pic1"></div>
-              </Paper>
+              <div>
+                <Paper elevation={2} className="hobbie-pic-container hobbie-pic1"></Paper>
+              </div>
             </Grid>
             <Grid className="sw-grid" item xs={12} sm={6}>
-              <Paper elevation={2}>
-                <div className="hobbie-pic-container hobbie-pic2"></div>
-              </Paper>
+              <div>
+                <Paper elevation={2} className="hobbie-pic-container hobbie-pic2"></Paper>
+              </div>
             </Grid>
             <Grid className="sw-grid" item xs={12} sm={6}>
-              <Paper elevation={2}>
-                <div className="hobbie-pic-container hobbie-pic3"></div>
-              </Paper>
+              <div>
+                <Paper elevation={2} className="hobbie-pic-container hobbie-pic3"></Paper>
+              </div>
             </Grid>
             <Grid className="sw-grid" item xs={12} sm={6}>
-              <Paper elevation={2}>
-                <div className="hobbie-pic-container hobbie-pic4"></div>
-              </Paper>
+              <div>
+                <Paper elevation={2} className="hobbie-pic-container hobbie-pic4"></Paper>
+              </div>
             </Grid>
           </Grid>
         </div>
