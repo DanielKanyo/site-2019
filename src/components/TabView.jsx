@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SwipeableViews from 'react-swipeable-views';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -36,7 +35,7 @@ const styles = theme => ({
   },
 });
 
-class SwipeableView extends Component {
+class TabView extends Component {
 
   handleChange = (event, tabValue) => {
     this.props.handleChangeTabValueProp(tabValue);
@@ -65,30 +64,18 @@ class SwipeableView extends Component {
               <Tab label="Hobbie" icon={<CameraIcon />} />
             </Tabs>
           </AppBar>
-          <SwipeableViews
-            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-            index={this.props.tabValueProp}
-            onChangeIndex={this.handleChangeIndex}
-          >
-            <TabContainer dir={theme.direction}>
-              <Work />
-            </TabContainer>
-            <TabContainer className="sw-tab-container" dir={theme.direction}>
-              <Skills />
-            </TabContainer>
-            <TabContainer className="sw-tab-container" dir={theme.direction}>
-              <Hobbie />
-            </TabContainer>
-          </SwipeableViews>
+          {this.props.tabValueProp === 0 && <TabContainer dir={theme.direction}><Work /></TabContainer>}
+          {this.props.tabValueProp === 1 && <TabContainer className="sw-tab-container" dir={theme.direction}><Skills /></TabContainer>}
+          {this.props.tabValueProp === 2 && <TabContainer className="sw-tab-container" dir={theme.direction}><Hobbie /></TabContainer>}
         </div>
       </div>
     );
   }
 }
 
-SwipeableView.propTypes = {
+TabView.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(SwipeableView);
+export default withStyles(styles, { withTheme: true })(TabView);
