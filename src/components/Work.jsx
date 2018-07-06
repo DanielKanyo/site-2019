@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -30,6 +29,34 @@ class Work extends Component {
                   <CardActions className="work-project-learnmore">
                     <a href="https://www.myvinn.com/en/hotel-technology/vinn-cockpit" target="_blank" rel="noopener noreferrer">
                       <Button size="small" color="primary" className="work-project-learnmore-button cockpit-button">
+                        Learn More
+                      </Button>
+                    </a>
+                  </CardActions>
+                </Card>
+              </div>
+            </div>
+          </Grid>
+          <Grid className="sw-grid" item xs={12} sm={6}>
+            <div className="tab-container-grid">
+              <div className="work-paper work4">
+                <Card>
+                  <div className="work-image bruckner-image">
+                    <div className="bruckner-img-color"></div>
+                    <div className="work-image-logo-bruckner"></div>
+                  </div>
+                  <CardContent className="work-project-container">
+                    <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
+                      Brückner - TCE
+                    </Typography>
+                  </CardContent>
+                  <CardActions className="work-project-learnmore">
+                    <a
+                      href="https://www.brueckner-maschinenbau.com/en/brueckner-maschinenbau/solutions/easy-operation-intelligent-line-management-ilm/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button size="small" color="primary" className="work-project-learnmore-button bruckner-button">
                         Learn More
                       </Button>
                     </a>
@@ -84,13 +111,6 @@ class Work extends Component {
                   </CardActions>
                 </Card>
               </div>
-            </div>
-          </Grid>
-          <Grid className="sw-grid" item xs={12} sm={6}>
-            <div className="tab-container-grid">
-              <Paper elevation={2}>
-                <div className="work-paper work4">Work4</div>
-              </Paper>
             </div>
           </Grid>
         </Grid>
