@@ -329,7 +329,7 @@
   text-align: center;
 }
 
-.MuiTypography-root-41[dir="ltr"] {
+.SwipeableView div[dir="ltr"] {
   padding-left: 10px !important;
   padding-right: 10px !important;
 }
