@@ -225,22 +225,22 @@
   flex-grow: inherit !important;
 }
 
-.MuiTab-textColorPrimary-118 svg {
+.SwipeableView button[role="tab"] svg {
   fill: rgba(0, 0, 0, 0.54);
   margin: 5px 0px 10px 0px;
 }
 
-.MuiTab-textColorPrimary-118.MuiTab-selected-120 {
+.SwipeableView button[aria-selected="true"] {
   color: white !important;
   background: #4286f4 !important;
   box-shadow: 0 4px 13px 0px rgba(0, 0, 0, 0.24), 0 7px 10px -5px rgba(0, 0, 0, 0.24);
 }
 
-.MuiTab-textColorPrimary-118.MuiTab-selected-120 svg {
+.SwipeableView button[aria-selected="true"] svg {
   fill: white;
 }
 
-.swipeable-view-tabs .TabIndicator-root-127 {
+.swipeable-view-tabs div > span {
   display: none;
 }
 
@@ -521,10 +521,6 @@
 
 .work-project-title {
   margin-bottom: 0px !important;
-}
-
-.body-overflow-hidden {
-  /* overflow-y: hidden !important; */
 }
 
 body {
