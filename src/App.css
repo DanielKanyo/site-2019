@@ -551,7 +551,7 @@ body {
     padding-bottom: 15px;
   }
   .content-placeholder {
-    padding: 0px 10px;
+    padding: 0px 10px 20px 10px;
   }
   .Footer {
     width: calc(100% - 40px);
@@ -575,6 +575,9 @@ body {
   .sw-grid {
     max-width: 100% !important;
     flex-basis: 100% !important;
+  }
+  .Contact {
+    width: calc(100% - 20px)
   }
 }
 
