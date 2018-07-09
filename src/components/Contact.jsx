@@ -84,7 +84,7 @@ class Contact extends Component {
                 <ListItemIcon>
                   <MarkunreadMailboxIcon />
                 </ListItemIcon>
-                <ListItemText primary="6723 Szeged, Taban street 38 4/11" />
+                <ListItemText primary="6723 Szeged, Taban street 38" />
               </ListItem>
               <ListItem button>
                 <ListItemIcon>
