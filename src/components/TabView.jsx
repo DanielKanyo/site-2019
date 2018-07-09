@@ -5,7 +5,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import LaptopIcon from 'mdi-react/LaptopIcon';
+import WorkIcon from 'mdi-react/WorkIcon';
 import StarIcon from 'mdi-react/StarIcon';
 import CameraIcon from 'mdi-react/CameraIcon';
 
@@ -59,7 +59,7 @@ class TabView extends Component {
               textColor="primary"
               fullWidth
             >
-              <Tab label="Work" icon={<LaptopIcon />} />
+              <Tab label="Work" icon={<WorkIcon />} />
               <Tab label="Skills" icon={<StarIcon />} />
               <Tab label="Hobbie" icon={<CameraIcon />} />
             </Tabs>

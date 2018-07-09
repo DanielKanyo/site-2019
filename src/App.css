@@ -524,12 +524,19 @@
 }
 
 .body-overflow-hidden {
-  overflow-y: hidden !important;
+  /* overflow-y: hidden !important; */
 }
 
 body {
-  overflow-y: auto !important;
   overflow-x: hidden;
+}
+
+.dialog-content {
+  padding: 0px !important; 
+}
+
+.dialog-content p {
+  padding: 0px 24px;
 }
 
 .Contact {

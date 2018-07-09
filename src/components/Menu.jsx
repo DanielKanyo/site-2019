@@ -9,7 +9,7 @@ import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 
 import AccountIcon from 'mdi-react/AccountIcon';
-import LaptopIcon from 'mdi-react/LaptopIcon';
+import WorkIcon from 'mdi-react/WorkIcon';
 import StarIcon from 'mdi-react/StarIcon';
 import CameraIcon from 'mdi-react/CameraIcon';
 import MessageProcessingIcon from 'mdi-react/MessageProcessingIcon';
@@ -87,7 +87,7 @@ class Menu extends React.Component {
           </ListItem>
           <ListItem onClick={(e) => {this.handleTabChange(0); this.scrollTo('SwipeableView')}} button className="list-item-button">
             <ListItemIcon>
-              <LaptopIcon color="rgba(0, 0, 0, 0.54)" />
+              <WorkIcon color="rgba(0, 0, 0, 0.54)" />
             </ListItemIcon>
             <ListItemText primary="Work" />
           </ListItem>
