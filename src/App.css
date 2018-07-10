@@ -114,6 +114,8 @@ a {
 }
 
 .content-placeholder {
+  max-width: 1100px;
+  margin: 0 auto;
   margin-bottom: 25px;
   z-index: 99;
   position: relative;
