@@ -110,6 +110,11 @@ class Skills extends Component {
                       className={classes.chip}
                     />
                     <Chip
+                      avatar={<Avatar className="skill-avatar-letter">D3</Avatar>}
+                      label="d3.js"
+                      className={classes.chip}
+                    />
+                    <Chip
                       avatar={<Avatar className="skill-avatar-letter">M</Avatar>}
                       label="Material"
                       className={classes.chip}
@@ -153,6 +158,11 @@ class Skills extends Component {
                     <Chip
                       avatar={<Avatar className="skill-avatar-letter">N</Avatar>}
                       label="Node.js"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">F</Avatar>}
+                      label="Firebase"
                       className={classes.chip}
                     />
                     <Chip
