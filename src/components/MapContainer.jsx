@@ -19,7 +19,7 @@ export class MapContainer extends Component {
         }}
         zoom={16}>
 
-        <Marker title={'Zilahy Lajos 1 | Magyarkanizsa'} />
+        <Marker title={'Tabán utca 38 | Szeged'} />
       </Map>
     );
   }

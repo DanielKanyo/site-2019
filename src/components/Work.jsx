@@ -20,15 +20,15 @@ class Work extends Component {
             <div className="tab-container-grid">
               <div className="work-paper work1">
                 <Card>
-                  <div className="work-image cockpit-image"><div className="work-image-logo-cockpit"></div></div>
+                  <div className="work-image trecapp-image"></div>
                   <CardContent className="work-project-container">
                     <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
-                      Vinn Cockpit
+                      Trecapp
                       </Typography>
                   </CardContent>
                   <CardActions className="work-project-learnmore">
-                    <a href="https://www.myvinn.com/en/hotel-technology/vinn-cockpit" target="_blank" rel="noopener noreferrer">
-                      <Button size="small" color="primary" className="work-project-learnmore-button cockpit-button">
+                    <a href="https://trecapp.com" target="_blank" rel="noopener noreferrer">
+                      <Button size="small" color="primary" className="work-project-learnmore-button trecapp-button">
                         Learn More
                       </Button>
                     </a>
@@ -69,10 +69,7 @@ class Work extends Component {
             <div className="tab-container-grid">
               <div className="work-paper work2">
                 <Card>
-                  <div className="work-image kuechenmonitor-image">
-                    <div className="kuechenmonitor-img-color"></div>
-                    <div className="work-image-logo-kuechenmonitor">K</div>
-                  </div>
+                  <div className="work-image kuechenmonitor-image"></div>
                   <CardContent className="work-project-container">
                     <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
                       Küchenmonitor
@@ -93,18 +90,15 @@ class Work extends Component {
             <div className="tab-container-grid">
               <div className="work-paper work3">
                 <Card>
-                  <div className="work-image fishingtours-image">
-                    <div className="fishingtours-img-color"></div>
-                    <div className="work-image-logo-fishingtours">F</div>
-                  </div>
+                  <div className="work-image fruitica-image"></div>
                   <CardContent className="work-project-container">
                     <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
-                      Fishingtours - Tisa
+                      Fruitica
                     </Typography>
                   </CardContent>
                   <CardActions className="work-project-learnmore">
-                    <a href="https://fishingtours-tisa.com/" target="_blank" rel="noopener noreferrer">
-                      <Button size="small" color="primary" className="work-project-learnmore-button fishingtours-button">
+                    <a href="https://fruitica.rs/" target="_blank" rel="noopener noreferrer">
+                      <Button size="small" color="primary" className="work-project-learnmore-button fruitica-button">
                         Learn More
                       </Button>
                     </a>
