@@ -57,7 +57,7 @@ class TabView extends Component {
               onChange={this.handleChange}
               indicatorColor="primary"
               textColor="primary"
-              fullWidth
+              variant="fullWidth"
             >
               <Tab label="Work" icon={<WorkIcon />} />
               <Tab label="Skills" icon={<StarIcon />} />
