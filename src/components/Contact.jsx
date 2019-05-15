@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MapContainer from './MapContainer';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Fab from '@material-ui/core/Fab';
 import Button from '@material-ui/core/Button';
 import EmailIcon from 'mdi-react/EmailIcon';
 
@@ -59,9 +60,9 @@ class Contact extends Component {
     const { classes } = this.props;
     return (
       <div className="Contact">
-        <Button variant="fab" color="primary" aria-label="add" className={classes.messageBtn} onClick={this.handleClickOpen}>
+        <Fab color="primary" aria-label="add" className={classes.messageBtn} onClick={this.handleClickOpen}>
           <EmailIcon color="#fff" />
-        </Button>
+        </Fab>
         <MapContainer />
 
         <Dialog
