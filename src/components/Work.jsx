@@ -52,7 +52,7 @@ class Work extends Component {
                   </CardContent>
                   <CardActions className="work-project-learnmore">
                     <a
-                      href="https://www.brueckner-maschinenbau.com/en/brueckner-maschinenbau/solutions/easy-operation-intelligent-line-management-ilm/"
+                      href="https://www.brueckner-maschinenbau.com/en/Technology-Innovations"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
