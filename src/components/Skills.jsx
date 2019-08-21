@@ -90,13 +90,18 @@ class Skills extends Component {
                       className={classes.chip}
                     />
                     <Chip
-                      avatar={<Avatar className="skill-avatar-letter">JQ</Avatar>}
-                      label="JQuery"
+                      avatar={<Avatar className="skill-avatar-letter">R</Avatar>}
+                      label="React.js"
                       className={classes.chip}
                     />
                     <Chip
                       avatar={<Avatar className="skill-avatar-letter">R</Avatar>}
-                      label="React.js"
+                      label="Redux"
+                      className={classes.chip}
+                    />
+                    <Chip
+                      avatar={<Avatar className="skill-avatar-letter">JQ</Avatar>}
+                      label="JQuery"
                       className={classes.chip}
                     />
                     <Chip
