@@ -15,14 +15,14 @@ class Work extends Component {
   render() {
     return (
       <div className="Work">
-        <Grid container spacing={16}>
+        <Grid container spacing={1}>
           <Grid className="sw-grid" item xs={12} sm={6}>
             <div className="tab-container-grid">
               <div className="work-paper work1">
                 <Card>
                   <div className="work-image trecapp-image"></div>
                   <CardContent className="work-project-container">
-                    <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
+                    <Typography className="work-project-title" gutterBottom variant="h6">
                       Trecapp
                       </Typography>
                   </CardContent>
@@ -46,7 +46,7 @@ class Work extends Component {
                     <div className="work-image-logo-bruckner"></div>
                   </div>
                   <CardContent className="work-project-container">
-                    <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
+                    <Typography className="work-project-title" gutterBottom variant="h6">
                       Brückner - TCE
                     </Typography>
                   </CardContent>
@@ -71,7 +71,7 @@ class Work extends Component {
                 <Card>
                   <div className="work-image kuechenmonitor-image"></div>
                   <CardContent className="work-project-container">
-                    <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
+                    <Typography className="work-project-title" gutterBottom variant="h6">
                       Küchenmonitor
                     </Typography>
                   </CardContent>
@@ -92,7 +92,7 @@ class Work extends Component {
                 <Card>
                   <div className="work-image fruitica-image"></div>
                   <CardContent className="work-project-container">
-                    <Typography className="work-project-title" gutterBottom variant="headline" component="h3">
+                    <Typography className="work-project-title" gutterBottom variant="h6">
                       Fruitica
                     </Typography>
                   </CardContent>

@@ -22,7 +22,7 @@ const styles = theme => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
@@ -41,7 +41,7 @@ class Skills extends Component {
     return (
       <div className="Skills">
         <div className={"tab-container " + classes.root}>
-          <Grid container spacing={16}>
+          <Grid container spacing={1}>
             <Grid className="sw-grid" item xs={12} sm={6}>
               <div className="tab-container-grid">
                 <Card className={classes.card}>
@@ -120,13 +120,13 @@ class Skills extends Component {
                       className={classes.chip}
                     />
                     <Chip
-                      avatar={<Avatar className="skill-avatar-letter">RN</Avatar>}
-                      label="React Native"
+                      avatar={<Avatar className="skill-avatar-letter">A</Avatar>}
+                      label="Angular"
                       className={classes.chip}
                     />
                     <Chip
-                      avatar={<Avatar className="skill-avatar-letter">M</Avatar>}
-                      label="Material"
+                      avatar={<Avatar className="skill-avatar-letter">RN</Avatar>}
+                      label="React Native"
                       className={classes.chip}
                     />
                   </CardContent>

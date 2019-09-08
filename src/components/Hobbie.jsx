@@ -16,7 +16,7 @@ class Hobbie extends Component {
     return (
       <div className="Hobbie">
         <div className="tab-container">
-          <Grid container spacing={16}>
+          <Grid container spacing={1}>
             <Grid className="sw-grid" item xs={12} sm={6}>
               <div>
                 <Paper elevation={2} className="hobbie-pic-container hobbie-pic1"></Paper>

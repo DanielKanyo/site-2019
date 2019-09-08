@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, forwardRef } from 'react';
 import MapContainer from './MapContainer';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -23,9 +23,9 @@ import CallIcon from '@material-ui/icons/Call';
 
 import '../App.css';
 
-function Transition(props) {
-  return <Slide direction="up" {...props} />;
-}
+const Transition = forwardRef((props, ref) => {
+  return <Slide ref={ref} direction="up" {...props} />;
+});
 
 const styles = theme => ({
   messageBtn: {

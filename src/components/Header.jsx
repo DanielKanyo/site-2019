@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
 
@@ -75,7 +74,7 @@ class Header extends Component {
         <div className={classes.root}>
           <AppBar className={"app-bar-" + this.props.headerStyleProp.class} position="static">
             <Toolbar>
-              <Typography variant="title" color="inherit" className={classes.flex} >
+              <div className={classes.flex} >
                 {/* <span className={"header-text-" + this.props.headerStyleProp.class}>Welcome</span> */}
                 <div className="header-navigation">
                   <Button 
@@ -119,7 +118,7 @@ class Header extends Component {
                     </span>
                   </Button>
                 </div>
-              </Typography>
+              </div>
               <div className="social-menu-line">
                 <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/kanyo.daniel">
                   <Button className={"social-icon-" + this.props.headerStyleProp.class}>
