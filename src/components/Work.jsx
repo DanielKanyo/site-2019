@@ -12,109 +12,130 @@ import '../App.css';
 const styles = {};
 
 class Work extends Component {
-  render() {
-    return (
-      <div className="Work">
-        <Grid container spacing={1}>
-          <Grid className="sw-grid" item xs={12} sm={6}>
-            <div className="tab-container-grid">
-              <div className="work-paper work1">
-                <Card>
-                  <div className="work-image trecapp-image"></div>
-                  <CardContent className="work-project-container">
-                    <Typography className="work-project-title" gutterBottom variant="h6">
-                      Trecapp
-                      </Typography>
-                  </CardContent>
-                  <CardActions className="work-project-learnmore">
-                    <a href="https://trecapp.com" target="_blank" rel="noopener noreferrer">
-                      <Button size="small" color="primary" className="work-project-learnmore-button trecapp-button">
-                        Learn More
-                      </Button>
-                    </a>
-                  </CardActions>
-                </Card>
-              </div>
+    render() {
+        return (
+            <div className="Work">
+                <Grid container spacing={1}>
+                    <Grid className="sw-grid" item xs={12} sm={12}>
+                        <div className="tab-container-grid">
+                            <div className="work-paper work1">
+                                <Card>
+                                    <div className="work-image trecapp-image"></div>
+                                    <CardContent className="work-project-container">
+                                        <Typography className="work-project-title" gutterBottom variant="h6">
+                                            Trecapp
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="work-project-learnmore">
+                                        <a href="https://trecapp.com" target="_blank" rel="noopener noreferrer">
+                                            <Button size="small" color="primary" className="work-project-learnmore-button trecapp-button">
+                                                Learn More
+                                            </Button>
+                                        </a>
+                                    </CardActions>
+                                </Card>
+                            </div>
+                        </div>
+                    </Grid>
+                    <Grid className="sw-grid" item xs={12} sm={6}>
+                        <div className="tab-container-grid">
+                            <div className="work-paper work4">
+                                <Card>
+                                    <div className="work-image bruckner-image">
+                                        <div className="bruckner-img-color"></div>
+                                        <div className="work-image-logo-bruckner"></div>
+                                    </div>
+                                    <CardContent className="work-project-container">
+                                        <Typography className="work-project-title" gutterBottom variant="h6">
+                                            Brückner - TCE
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="work-project-learnmore">
+                                        <a
+                                            href="https://www.brueckner-maschinenbau.com/en/Technology-Innovations"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <Button size="small" color="primary" className="work-project-learnmore-button bruckner-button">
+                                                Learn More
+                                            </Button>
+                                        </a>
+                                    </CardActions>
+                                </Card>
+                            </div>
+                        </div>
+                    </Grid>
+                    <Grid className="sw-grid" item xs={12} sm={6}>
+                        <div className="tab-container-grid">
+                            <div className="work-paper work2">
+                                <Card>
+                                    <div className="work-image kuechenmonitor-image"></div>
+                                    <CardContent className="work-project-container">
+                                        <Typography className="work-project-title" gutterBottom variant="h6">
+                                            Küchenmonitor
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="work-project-learnmore">
+                                        <a href="https://kuechenmonitor.de/pages/index.html" target="_blank" rel="noopener noreferrer">
+                                            <Button size="small" color="primary" className="work-project-learnmore-button kuechenmonitor-button">
+                                                Learn More
+                                            </Button>
+                                        </a>
+                                    </CardActions>
+                                </Card>
+                            </div>
+                        </div>
+                    </Grid>
+                    <Grid className="sw-grid" item xs={12} sm={6}>
+                        <div className="tab-container-grid">
+                            <div className="work-paper work3">
+                                <Card>
+                                    <div className="work-image fruitica-image"></div>
+                                    <CardContent className="work-project-container">
+                                        <Typography className="work-project-title" gutterBottom variant="h6">
+                                            Fruitica
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="work-project-learnmore">
+                                        <a href="https://fruitica.rs/" target="_blank" rel="noopener noreferrer">
+                                            <Button size="small" color="primary" className="work-project-learnmore-button fruitica-button">
+                                                Learn More
+                                            </Button>
+                                        </a>
+                                    </CardActions>
+                                </Card>
+                            </div>
+                        </div>
+                    </Grid>
+                    <Grid className="sw-grid" item xs={12} sm={6}>
+                        <div className="tab-container-grid">
+                            <div className="work-paper work3">
+                                <Card>
+                                    <div className="work-image body-space-studio-image"></div>
+                                    <CardContent className="work-project-container">
+                                        <Typography className="work-project-title" gutterBottom variant="h6">
+                                            Body Space Studio
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions className="work-project-learnmore">
+                                        <a href="https://bodyspacestudio.rs/" target="_blank" rel="noopener noreferrer">
+                                            <Button size="small" color="primary" className="work-project-learnmore-button body-space-studio-button">
+                                                Learn More
+                                            </Button>
+                                        </a>
+                                    </CardActions>
+                                </Card>
+                            </div>
+                        </div>
+                    </Grid>
+                </Grid>
             </div>
-          </Grid>
-          <Grid className="sw-grid" item xs={12} sm={6}>
-            <div className="tab-container-grid">
-              <div className="work-paper work4">
-                <Card>
-                  <div className="work-image bruckner-image">
-                    <div className="bruckner-img-color"></div>
-                    <div className="work-image-logo-bruckner"></div>
-                  </div>
-                  <CardContent className="work-project-container">
-                    <Typography className="work-project-title" gutterBottom variant="h6">
-                      Brückner - TCE
-                    </Typography>
-                  </CardContent>
-                  <CardActions className="work-project-learnmore">
-                    <a
-                      href="https://www.brueckner-maschinenbau.com/en/Technology-Innovations"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button size="small" color="primary" className="work-project-learnmore-button bruckner-button">
-                        Learn More
-                      </Button>
-                    </a>
-                  </CardActions>
-                </Card>
-              </div>
-            </div>
-          </Grid>
-          <Grid className="sw-grid" item xs={12} sm={6}>
-            <div className="tab-container-grid">
-              <div className="work-paper work2">
-                <Card>
-                  <div className="work-image kuechenmonitor-image"></div>
-                  <CardContent className="work-project-container">
-                    <Typography className="work-project-title" gutterBottom variant="h6">
-                      Küchenmonitor
-                    </Typography>
-                  </CardContent>
-                  <CardActions className="work-project-learnmore">
-                    <a href="https://kuechenmonitor.de/pages/index.html" target="_blank" rel="noopener noreferrer">
-                      <Button size="small" color="primary" className="work-project-learnmore-button kuechenmonitor-button">
-                        Learn More
-                      </Button>
-                    </a>
-                  </CardActions>
-                </Card>
-              </div>
-            </div>
-          </Grid>
-          <Grid className="sw-grid" item xs={12} sm={6}>
-            <div className="tab-container-grid">
-              <div className="work-paper work3">
-                <Card>
-                  <div className="work-image fruitica-image"></div>
-                  <CardContent className="work-project-container">
-                    <Typography className="work-project-title" gutterBottom variant="h6">
-                      Fruitica
-                    </Typography>
-                  </CardContent>
-                  <CardActions className="work-project-learnmore">
-                    <a href="https://fruitica.rs/" target="_blank" rel="noopener noreferrer">
-                      <Button size="small" color="primary" className="work-project-learnmore-button fruitica-button">
-                        Learn More
-                      </Button>
-                    </a>
-                  </CardActions>
-                </Card>
-              </div>
-            </div>
-          </Grid>
-        </Grid>
-      </div>
-    );
-  }
+        );
+    }
 }
 
 Work.propTypes = {
-  classes: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Work);

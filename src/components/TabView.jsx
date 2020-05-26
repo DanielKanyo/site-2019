@@ -16,66 +16,66 @@ import Hobbie from './Hobbie';
 import '../App.css';
 
 function TabContainer({ children, dir }) {
-  return (
-    <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
-      {children}
-    </Typography>
-  );
+    return (
+        <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
+            {children}
+        </Typography>
+    );
 }
 
 TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  dir: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+    dir: PropTypes.string.isRequired,
 };
 
 const styles = theme => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-    width: '100%',
-  },
+    root: {
+        backgroundColor: theme.palette.background.paper,
+        width: '100%',
+    },
 });
 
 class TabView extends Component {
 
-  handleChange = (event, tabValue) => {
-    this.props.handleChangeTabValueProp(tabValue);
-  };
+    handleChange = (event, tabValue) => {
+        this.props.handleChangeTabValueProp(tabValue);
+    };
 
-  handleChangeIndex = (tabValue) => {
-    this.props.handleChangeTabValueProp(tabValue);
-  };
+    handleChangeIndex = (tabValue) => {
+        this.props.handleChangeTabValueProp(tabValue);
+    };
 
-  render() {
-    const { classes, theme } = this.props;
-    return (
-      <div className="SwipeableView" name="SwipeableView">
-        <div className={classes.root}>
-          <AppBar position="static" color="default">
-            <Tabs
-              className="swipeable-view-tabs"
-              value={this.props.tabValueProp}
-              onChange={this.handleChange}
-              indicatorColor="primary"
-              textColor="primary"
-              variant="fullWidth"
-            >
-              <Tab label="Work" icon={<WorkIcon />} />
-              <Tab label="Skills" icon={<StarIcon />} />
-              <Tab label="Hobbie" icon={<CameraIcon />} />
-            </Tabs>
-          </AppBar>
-          {this.props.tabValueProp === 0 && <TabContainer dir={theme.direction}><Work /></TabContainer>}
-          {this.props.tabValueProp === 1 && <TabContainer className="sw-tab-container" dir={theme.direction}><Skills /></TabContainer>}
-          {this.props.tabValueProp === 2 && <TabContainer className="sw-tab-container" dir={theme.direction}><Hobbie /></TabContainer>}
-        </div>
-      </div>
-    );
-  }
+    render() {
+        const { classes, theme } = this.props;
+        return (
+            <div className="SwipeableView" name="SwipeableView">
+                <div className={classes.root}>
+                    <AppBar position="static" color="default">
+                        <Tabs
+                            className="swipeable-view-tabs"
+                            value={this.props.tabValueProp}
+                            onChange={this.handleChange}
+                            indicatorColor="primary"
+                            textColor="primary"
+                            variant="fullWidth"
+                        >
+                            <Tab label="Work" icon={<WorkIcon />} />
+                            <Tab label="Skills" icon={<StarIcon />} />
+                            <Tab label="Hobbie" icon={<CameraIcon />} />
+                        </Tabs>
+                    </AppBar>
+                    {this.props.tabValueProp === 0 && <TabContainer dir={theme.direction}><Work /></TabContainer>}
+                    {this.props.tabValueProp === 1 && <TabContainer className="sw-tab-container" dir={theme.direction}><Skills /></TabContainer>}
+                    {this.props.tabValueProp === 2 && <TabContainer className="sw-tab-container" dir={theme.direction}><Hobbie /></TabContainer>}
+                </div>
+            </div>
+        );
+    }
 }
 
 TabView.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired,
+    theme: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(TabView);

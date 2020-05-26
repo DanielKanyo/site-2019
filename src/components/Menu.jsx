@@ -23,145 +23,145 @@ const styles = theme => ({});
 
 class Menu extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      right: false,
-    };
-    this.scrollToTop = this.scrollToTop.bind(this);
-  }
-
-  toggleDrawer = (side, open) => () => {
-    let body = document.getElementsByTagName('body')[0];
-    
-    if (body.classList.length !== 0) {
-      body.classList.remove("body-overflow-hidden"); 
+    constructor(props) {
+        super(props);
+        this.state = {
+            right: false,
+        };
+        this.scrollToTop = this.scrollToTop.bind(this);
     }
 
-    this.setState({
-      [side]: open,
-    });
-  };
+    toggleDrawer = (side, open) => () => {
+        let body = document.getElementsByTagName('body')[0];
 
-  toggleMenu(side, open) {
-    this.setState({
-      [side]: open
-    })
-  }
+        if (body.classList.length !== 0) {
+            body.classList.remove("body-overflow-hidden");
+        }
 
-  componentDidMount() {
-    this.props.onRef(this)
-  }
-  componentWillUnmount() {
-    this.props.onRef(undefined)
-  }
+        this.setState({
+            [side]: open,
+        });
+    };
 
-  handleTabChange(tabValue) {
-    this.props.handleChangeTabValueProp(tabValue);
-  }
+    toggleMenu(side, open) {
+        this.setState({
+            [side]: open
+        })
+    }
 
-  scrollToTop() {
-    scroll.scrollToTop();
-  }
+    componentDidMount() {
+        this.props.onRef(this)
+    }
+    componentWillUnmount() {
+        this.props.onRef(undefined)
+    }
 
-  scrollTo(string) {
-    scroller.scrollTo(string, {
-      duration: 500,
-      delay: 0,
-      smooth: 'easeInOutQuart',
-      offset: -100
-    });
-  }
+    handleTabChange(tabValue) {
+        this.props.handleChangeTabValueProp(tabValue);
+    }
 
-  render() {
-    const { classes } = this.props;
+    scrollToTop() {
+        scroll.scrollToTop();
+    }
 
-    const sideList = (
-      <div className={classes.list}>
-        <List>
-          <ListItem onClick={(e) => this.scrollTo('About')} button className="list-item-button">
-            <ListItemIcon>
-              <AccountIcon color="rgba(0, 0, 0, 0.54)" />
-            </ListItemIcon>
-            <ListItemText primary="About" />
-          </ListItem>
-          <ListItem onClick={(e) => {this.handleTabChange(0); this.scrollTo('SwipeableView')}} button className="list-item-button">
-            <ListItemIcon>
-              <WorkIcon color="rgba(0, 0, 0, 0.54)" />
-            </ListItemIcon>
-            <ListItemText primary="Work" />
-          </ListItem>
-          <ListItem onClick={(e) => {this.handleTabChange(1); this.scrollTo('SwipeableView')}} button className="list-item-button">
-            <ListItemIcon>
-              <StarIcon color="rgba(0, 0, 0, 0.54)" />
-            </ListItemIcon>
-            <ListItemText primary="Skills" />
-          </ListItem>
-          <ListItem onClick={(e) => {this.handleTabChange(2); this.scrollTo('SwipeableView')}} button className="list-item-button">
-            <ListItemIcon>
-              <CameraIcon color="rgba(0, 0, 0, 0.54)" />
-            </ListItemIcon>
-            <ListItemText primary="Hobbie" />
-          </ListItem>
-          <ListItem onClick={(e) => this.scrollTo('Contact')} button className="list-item-button">
-            <ListItemIcon>
-              <MessageProcessingIcon color="rgba(0, 0, 0, 0.54)" />
-            </ListItemIcon>
-            <ListItemText primary="Contact" />
-          </ListItem>
+    scrollTo(string) {
+        scroller.scrollTo(string, {
+            duration: 500,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+            offset: -100
+        });
+    }
 
-          <Divider className="menu-divider" />
-          <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/kanyo.daniel">
-            <ListItem button className="list-item-button">
-              <ListItemIcon>
-                <FacebookBoxIcon color="rgba(0, 0, 0, 0.54)" />
-              </ListItemIcon>
-              <ListItemText primary="Facebook" />
-            </ListItem>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/DanielKanyo">
-            <ListItem button className="list-item-button">
-              <ListItemIcon>
-                <GithubIcon color="rgba(0, 0, 0, 0.54)" />
-              </ListItemIcon>
-              <ListItemText primary="GitHub" />
-            </ListItem>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/daniel_kanyo/">
-            <ListItem button className="list-item-button">
-              <ListItemIcon>
-                <InstagramIcon color="rgba(0, 0, 0, 0.54)" />
-              </ListItemIcon>
-              <ListItemText primary="Instagram" />
-            </ListItem>
-          </a>
-        </List>
-      </div>
-    );
+    render() {
+        const { classes } = this.props;
 
-    return (
-      <div>
-        <Drawer
-          anchor="left"
-          open={this.state.right}
-          onClose={this.toggleDrawer('right', false)}
-        >
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer('right', false)}
-            onKeyDown={this.toggleDrawer('right', false)}
-          >
-            {sideList}
-          </div>
-        </Drawer>
-      </div>
-    );
-  }
+        const sideList = (
+            <div className={classes.list}>
+                <List>
+                    <ListItem onClick={(e) => this.scrollTo('About')} button className="list-item-button">
+                        <ListItemIcon>
+                            <AccountIcon color="rgba(0, 0, 0, 0.54)" />
+                        </ListItemIcon>
+                        <ListItemText primary="About" />
+                    </ListItem>
+                    <ListItem onClick={(e) => { this.handleTabChange(0); this.scrollTo('SwipeableView') }} button className="list-item-button">
+                        <ListItemIcon>
+                            <WorkIcon color="rgba(0, 0, 0, 0.54)" />
+                        </ListItemIcon>
+                        <ListItemText primary="Work" />
+                    </ListItem>
+                    <ListItem onClick={(e) => { this.handleTabChange(1); this.scrollTo('SwipeableView') }} button className="list-item-button">
+                        <ListItemIcon>
+                            <StarIcon color="rgba(0, 0, 0, 0.54)" />
+                        </ListItemIcon>
+                        <ListItemText primary="Skills" />
+                    </ListItem>
+                    <ListItem onClick={(e) => { this.handleTabChange(2); this.scrollTo('SwipeableView') }} button className="list-item-button">
+                        <ListItemIcon>
+                            <CameraIcon color="rgba(0, 0, 0, 0.54)" />
+                        </ListItemIcon>
+                        <ListItemText primary="Hobbie" />
+                    </ListItem>
+                    <ListItem onClick={(e) => this.scrollTo('Contact')} button className="list-item-button">
+                        <ListItemIcon>
+                            <MessageProcessingIcon color="rgba(0, 0, 0, 0.54)" />
+                        </ListItemIcon>
+                        <ListItemText primary="Contact" />
+                    </ListItem>
+
+                    <Divider className="menu-divider" />
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/kanyo.daniel">
+                        <ListItem button className="list-item-button">
+                            <ListItemIcon>
+                                <FacebookBoxIcon color="rgba(0, 0, 0, 0.54)" />
+                            </ListItemIcon>
+                            <ListItemText primary="Facebook" />
+                        </ListItem>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/DanielKanyo">
+                        <ListItem button className="list-item-button">
+                            <ListItemIcon>
+                                <GithubIcon color="rgba(0, 0, 0, 0.54)" />
+                            </ListItemIcon>
+                            <ListItemText primary="GitHub" />
+                        </ListItem>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/daniel_kanyo/">
+                        <ListItem button className="list-item-button">
+                            <ListItemIcon>
+                                <InstagramIcon color="rgba(0, 0, 0, 0.54)" />
+                            </ListItemIcon>
+                            <ListItemText primary="Instagram" />
+                        </ListItem>
+                    </a>
+                </List>
+            </div>
+        );
+
+        return (
+            <div>
+                <Drawer
+                    anchor="left"
+                    open={this.state.right}
+                    onClose={this.toggleDrawer('right', false)}
+                >
+                    <div
+                        tabIndex={0}
+                        role="button"
+                        onClick={this.toggleDrawer('right', false)}
+                        onKeyDown={this.toggleDrawer('right', false)}
+                    >
+                        {sideList}
+                    </div>
+                </Drawer>
+            </div>
+        );
+    }
 }
 
 Menu.propTypes = {
-  classes: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Menu);

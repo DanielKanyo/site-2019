@@ -24,96 +24,96 @@ import CallIcon from '@material-ui/icons/Call';
 import '../App.css';
 
 const Transition = forwardRef((props, ref) => {
-  return <Slide ref={ref} direction="up" {...props} />;
+    return <Slide ref={ref} direction="up" {...props} />;
 });
 
 const styles = theme => ({
-  messageBtn: {
-    position: 'absolute',
-    zIndex: 5000,
-    bottom: '25px',
-    right: '55px'
-  },
-  telBtn: {
-    position: 'absolute',
-    zIndex: 5000,
-    bottom: '25px',
-    right: '125px'
-  },
+    messageBtn: {
+        position: 'absolute',
+        zIndex: 5000,
+        bottom: '25px',
+        right: '55px'
+    },
+    telBtn: {
+        position: 'absolute',
+        zIndex: 5000,
+        bottom: '25px',
+        right: '125px'
+    },
 });
 
 class Contact extends Component {
 
-  state = {
-    open: false,
-  };
+    state = {
+        open: false,
+    };
 
-  handleClickOpen = () => {
-    this.setState({ open: true });
-  };
+    handleClickOpen = () => {
+        this.setState({ open: true });
+    };
 
-  handleClose = () => {
-    this.setState({ open: false });
-  };
+    handleClose = () => {
+        this.setState({ open: false });
+    };
 
-  render() {
-    const { classes } = this.props;
-    return (
-      <div className="Contact">
-        <Fab color="primary" aria-label="add" className={classes.messageBtn} onClick={this.handleClickOpen}>
-          <EmailIcon color="#fff" />
-        </Fab>
-        <MapContainer />
+    render() {
+        const { classes } = this.props;
+        return (
+            <div className="Contact">
+                <Fab color="primary" aria-label="add" className={classes.messageBtn} onClick={this.handleClickOpen}>
+                    <EmailIcon color="#fff" />
+                </Fab>
+                <MapContainer />
 
-        <Dialog
-          open={this.state.open}
-          TransitionComponent={Transition}
-          keepMounted
-          onClose={this.handleClose}
-          aria-labelledby="alert-dialog-slide-title"
-          aria-describedby="alert-dialog-slide-description"
-        >
-          <DialogTitle id="alert-dialog-slide-title">
-            {"My Contact"}
-          </DialogTitle>
-          <DialogContent className="dialog-content">
-            <DialogContentText id="alert-dialog-slide-description">
-              My contacts are listed below.
-            </DialogContentText>
-            <List component="nav">
-              <ListItem button>
-                <ListItemIcon>
-                  <MarkunreadMailboxIcon />
-                </ListItemIcon>
-                <ListItemText primary="6723 Szeged, Taban street 38" />
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <EmailSecIcon />
-                </ListItemIcon>
-                <ListItemText primary="dk@gerhardt.io" />
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <CallIcon />
-                </ListItemIcon>
-                <ListItemText className="cellnumber" primary="+36 30 77929353" />
-              </ListItem>
-            </List>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
-              Close
-            </Button>
-          </DialogActions>
-        </Dialog>
-      </div>
-    );
-  }
+                <Dialog
+                    open={this.state.open}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={this.handleClose}
+                    aria-labelledby="alert-dialog-slide-title"
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <DialogTitle id="alert-dialog-slide-title">
+                        {"My Contact"}
+                    </DialogTitle>
+                    <DialogContent className="dialog-content">
+                        <DialogContentText id="alert-dialog-slide-description">
+                            My contacts are listed below.
+                        </DialogContentText>
+                        <List component="nav">
+                            <ListItem button>
+                                <ListItemIcon>
+                                    <MarkunreadMailboxIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="6723 Szeged, Taban street 38" />
+                            </ListItem>
+                            <ListItem button>
+                                <ListItemIcon>
+                                    <EmailSecIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="dk@gerhardt.io" />
+                            </ListItem>
+                            <ListItem button>
+                                <ListItemIcon>
+                                    <CallIcon />
+                                </ListItemIcon>
+                                <ListItemText className="cellnumber" primary="+36 30 77929353" />
+                            </ListItem>
+                        </List>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={this.handleClose} color="primary">
+                            Close
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+            </div>
+        );
+    }
 }
 
 Contact.propTypes = {
-  classes: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Contact);
