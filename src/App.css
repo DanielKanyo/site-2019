@@ -380,6 +380,11 @@ a {
     max-height: 266px;
 }
 
+.work1 {
+    min-height: 400px;
+    max-height: 400px;
+}
+
 .work-project-container {
     padding-bottom: 5px !important;
 }
@@ -399,6 +404,7 @@ a {
     background-image: url("./images/trecapp_bg.jpg");
     background-size: cover;
     background-position: center;
+    height: 300px;
 }
 
 .kuechenmonitor-image {
