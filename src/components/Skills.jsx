@@ -9,7 +9,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Chip from '@material-ui/core/Chip';
 import HeartIcon from 'mdi-react/HeartIcon';
 import LinuxIcon from 'mdi-react/LinuxIcon';
-import NodejsIcon from 'mdi-react/NodejsIcon';
+import LeafIcon from 'mdi-react/LeafIcon';
 import ReactIcon from 'mdi-react/ReactIcon';
 import DockerIcon from 'mdi-react/DockerIcon';
 import IconButton from '@material-ui/core/IconButton';
@@ -38,264 +38,282 @@ const styles = theme => ({
 class Skills extends Component {
     render() {
         const { classes } = this.props;
+
         return (
-            <div className="Skills">
-                <div className={"tab-container " + classes.root}>
+            <div className='Skills'>
+                <div className={'tab-container ' + classes.root}>
                     <Grid container spacing={1}>
-                        <Grid className="sw-grid" item xs={12} sm={6}>
-                            <div className="tab-container-grid">
+                        <Grid className='sw-grid' item xs={12} sm={6}>
+                            <div className='tab-container-grid'>
                                 <Card className={classes.card}>
                                     <CardHeader
                                         avatar={
-                                            <Avatar aria-label="Recipe" className={classes.avatar}>
+                                            <Avatar aria-label='Recipe' className={classes.avatar}>
                                                 FE
                                             </Avatar>
                                         }
                                         action={
-                                            <Tooltip id="tooltip-left" title="More..." placement="left">
-                                                <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Front_and_back_ends">
-                                                    <IconButton className="information-button">
-                                                        <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
+                                            <Tooltip id='tooltip-left' title='More...' placement='left'>
+                                                <a
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                    href='https://en.wikipedia.org/wiki/Front_and_back_ends'
+                                                >
+                                                    <IconButton className='information-button'>
+                                                        <InformationVariantIcon color='rgba(0, 0, 0, 0.54)' />
                                                     </IconButton>
                                                 </a>
                                             </Tooltip>
                                         }
-                                        title="Front-end"
+                                        title='Front-end'
                                     />
-                                    <div className={classes.favourite + " front-end-fav"}>
-                                        <div className="favourite-icon-left">
-                                            <ReactIcon color="white" />
+                                    <div className={classes.favourite + ' front-end-fav'}>
+                                        <div className='favourite-icon-left'>
+                                            <ReactIcon color='white' />
                                         </div>
-                                        <div className="favourite-text">
+                                        <div className='favourite-text'>
                                             REACT.JS
                                         </div>
-                                        <div className="favourite-icon-right">
-                                            <HeartIcon color="white" />
+                                        <div className='favourite-icon-right'>
+                                            <HeartIcon color='white' />
                                         </div>
                                     </div>
-                                    <CardContent className="card-content">
+                                    <CardContent className='card-content'>
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">H</Avatar>}
-                                            label="HTML5"
+                                            avatar={<Avatar className='skill-avatar-letter'>H</Avatar>}
+                                            label='HTML5'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">CS</Avatar>}
-                                            label="CSS3"
+                                            avatar={<Avatar className='skill-avatar-letter'>CS</Avatar>}
+                                            label='CSS3'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">JS</Avatar>}
-                                            label="Java Script"
+                                            avatar={<Avatar className='skill-avatar-letter'>JS</Avatar>}
+                                            label='Java Script'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">R</Avatar>}
-                                            label="React.js"
+                                            avatar={<Avatar className='skill-avatar-letter'>R</Avatar>}
+                                            label='React.js'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">R</Avatar>}
-                                            label="Redux"
+                                            avatar={<Avatar className='skill-avatar-letter'>R</Avatar>}
+                                            label='Redux'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">JQ</Avatar>}
-                                            label="JQuery"
+                                            avatar={<Avatar className='skill-avatar-letter'>JQ</Avatar>}
+                                            label='JQuery'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">BS</Avatar>}
-                                            label="Bootstrap"
+                                            avatar={<Avatar className='skill-avatar-letter'>BS</Avatar>}
+                                            label='Bootstrap'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">P</Avatar>}
-                                            label="Polymer"
+                                            avatar={<Avatar className='skill-avatar-letter'>P</Avatar>}
+                                            label='Polymer'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">D3</Avatar>}
-                                            label="d3.js"
+                                            avatar={<Avatar className='skill-avatar-letter'>D3</Avatar>}
+                                            label='d3.js'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">A</Avatar>}
-                                            label="Angular"
+                                            avatar={<Avatar className='skill-avatar-letter'>A</Avatar>}
+                                            label='Angular'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">RN</Avatar>}
-                                            label="React Native"
+                                            avatar={<Avatar className='skill-avatar-letter'>RN</Avatar>}
+                                            label='React Native'
                                             className={classes.chip}
                                         />
                                     </CardContent>
                                 </Card>
                             </div>
                         </Grid>
-                        <Grid className="sw-grid" item xs={12} sm={6}>
-                            <div className="tab-container-grid">
+                        <Grid className='sw-grid' item xs={12} sm={6}>
+                            <div className='tab-container-grid'>
                                 <Card className={classes.card}>
                                     <CardHeader
                                         avatar={
-                                            <Avatar aria-label="Recipe" className={classes.avatar}>
+                                            <Avatar aria-label='Recipe' className={classes.avatar}>
                                                 BE
                                             </Avatar>
                                         }
                                         action={
-                                            <Tooltip id="tooltip-left" title="More..." placement="left">
-                                                <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Front_and_back_ends">
-                                                    <IconButton className="information-button">
-                                                        <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
+                                            <Tooltip id='tooltip-left' title='More...' placement='left'>
+                                                <a
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                    href='https://en.wikipedia.org/wiki/Front_and_back_ends'
+                                                >
+                                                    <IconButton className='information-button'>
+                                                        <InformationVariantIcon color='rgba(0, 0, 0, 0.54)' />
                                                     </IconButton>
                                                 </a>
                                             </Tooltip>
                                         }
-                                        title="Back-end"
+                                        title='Back-end'
                                     />
-                                    <div className={classes.favourite + " back-end-fav"}>
-                                        <div className="favourite-icon-left">
-                                            <NodejsIcon color="white" />
+                                    <div className={classes.favourite + ' back-end-fav'}>
+                                        <div className='favourite-icon-left'>
+                                            <LeafIcon color='white' />
                                         </div>
-                                        <div className="favourite-text">
-                                            NODE.JS
+                                        <div className='favourite-text'>
+                                            SPRING BOOT
                                         </div>
-                                        <div className="favourite-icon-right">
-                                            <HeartIcon color="white" />
+                                        <div className='favourite-icon-right'>
+                                            <HeartIcon color='white' />
                                         </div>
                                     </div>
-                                    <CardContent className="card-content">
+                                    <CardContent className='card-content'>
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">N</Avatar>}
-                                            label="Node.js"
+                                            avatar={<Avatar className='skill-avatar-letter'>S</Avatar>}
+                                            label='Spring boot'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">F</Avatar>}
-                                            label="Firebase"
+                                            avatar={<Avatar className='skill-avatar-letter'>N</Avatar>}
+                                            label='Node.js'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">J</Avatar>}
-                                            label="Java"
+                                            avatar={<Avatar className='skill-avatar-letter'>F</Avatar>}
+                                            label='Firebase'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">P</Avatar>}
-                                            label="Php"
+                                            avatar={<Avatar className='skill-avatar-letter'>J</Avatar>}
+                                            label='Java'
+                                            className={classes.chip}
+                                        />
+                                        <Chip
+                                            avatar={<Avatar className='skill-avatar-letter'>P</Avatar>}
+                                            label='Php'
                                             className={classes.chip}
                                         />
                                     </CardContent>
                                 </Card>
                             </div>
                         </Grid>
-                        <Grid className="sw-grid" item xs={12} sm={6}>
-                            <div className="tab-container-grid">
+                        <Grid className='sw-grid' item xs={12} sm={6}>
+                            <div className='tab-container-grid'>
                                 <Card className={classes.card}>
                                     <CardHeader
                                         avatar={
-                                            <Avatar aria-label="Recipe" className={classes.avatar}>
+                                            <Avatar aria-label='Recipe' className={classes.avatar}>
                                                 DO
                                             </Avatar>
                                         }
                                         action={
-                                            <Tooltip id="tooltip-left" title="More..." placement="left">
-                                                <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/DevOps">
-                                                    <IconButton className="information-button">
-                                                        <InformationVariantIcon color="rgba(0, 0, 0, 0.54)" />
+                                            <Tooltip id='tooltip-left' title='More...' placement='left'>
+                                                <a
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                    href='https://en.wikipedia.org/wiki/DevOps'
+                                                >
+                                                    <IconButton className='information-button'>
+                                                        <InformationVariantIcon color='rgba(0, 0, 0, 0.54)' />
                                                     </IconButton>
                                                 </a>
                                             </Tooltip>
                                         }
-                                        title="DevOps"
+                                        title='DevOps'
                                     />
-                                    <div className={classes.favourite + " devops-fav"}>
-                                        <div className="favourite-icon-left">
-                                            <DockerIcon color="white" />
+                                    <div className={classes.favourite + ' devops-fav'}>
+                                        <div className='favourite-icon-left'>
+                                            <DockerIcon color='white' />
                                         </div>
-                                        <div className="favourite-text">
+                                        <div className='favourite-text'>
                                             DOCKER
                                         </div>
-                                        <div className="favourite-icon-right">
-                                            <HeartIcon color="white" />
+                                        <div className='favourite-icon-right'>
+                                            <HeartIcon color='white' />
                                         </div>
                                     </div>
-                                    <CardContent className="card-content">
+                                    <CardContent className='card-content'>
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">J</Avatar>}
-                                            label="Jenkins"
+                                            avatar={<Avatar className='skill-avatar-letter'>J</Avatar>}
+                                            label='Jenkins'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">D</Avatar>}
-                                            label="Docker"
+                                            avatar={<Avatar className='skill-avatar-letter'>D</Avatar>}
+                                            label='Docker'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">SS</Avatar>}
-                                            label="Shell Script"
+                                            avatar={<Avatar className='skill-avatar-letter'>SS</Avatar>}
+                                            label='Shell Script'
                                             className={classes.chip}
                                         />
                                     </CardContent>
                                 </Card>
                             </div>
                         </Grid>
-                        <Grid className="sw-grid" item xs={12} sm={6}>
-                            <div className="tab-container-grid">
+                        <Grid className='sw-grid' item xs={12} sm={6}>
+                            <div className='tab-container-grid'>
                                 <Card className={classes.card}>
                                     <CardHeader
                                         avatar={
-                                            <Avatar aria-label="Recipe" className={classes.avatar}>
+                                            <Avatar aria-label='Recipe' className={classes.avatar}>
                                                 OT
                                             </Avatar>
                                         }
-                                        title="Other"
+                                        title='Other'
                                     />
-                                    <div className={classes.favourite + " others-fav"}>
-                                        <div className="favourite-icon-left">
-                                            <LinuxIcon color="white" />
+                                    <div className={classes.favourite + ' others-fav'}>
+                                        <div className='favourite-icon-left'>
+                                            <LinuxIcon color='white' />
                                         </div>
-                                        <div className="favourite-text">
+                                        <div className='favourite-text'>
                                             LINUX
                                         </div>
-                                        <div className="favourite-icon-right">
-                                            <HeartIcon color="white" />
+                                        <div className='favourite-icon-right'>
+                                            <HeartIcon color='white' />
                                         </div>
                                     </div>
-                                    <CardContent className="card-content">
+                                    <CardContent className='card-content'>
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">L</Avatar>}
-                                            label="Linux"
+                                            avatar={<Avatar className='skill-avatar-letter'>L</Avatar>}
+                                            label='Linux'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">G</Avatar>}
-                                            label="Git"
+                                            avatar={<Avatar className='skill-avatar-letter'>G</Avatar>}
+                                            label='Git'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">MD</Avatar>}
-                                            label="MongoDB"
+                                            avatar={<Avatar className='skill-avatar-letter'>MD</Avatar>}
+                                            label='MongoDB'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">MS</Avatar>}
-                                            label="MySQL"
+                                            avatar={<Avatar className='skill-avatar-letter'>MS</Avatar>}
+                                            label='MySQL'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">UX</Avatar>}
-                                            label="UX Design"
+                                            avatar={<Avatar className='skill-avatar-letter'>UX</Avatar>}
+                                            label='UX Design'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">NS</Avatar>}
-                                            label="Non-Smoking"
+                                            avatar={<Avatar className='skill-avatar-letter'>NS</Avatar>}
+                                            label='Non-Smoking'
                                             className={classes.chip}
                                         />
                                         <Chip
-                                            avatar={<Avatar className="skill-avatar-letter">DL</Avatar>}
-                                            label="Driving Licence"
+                                            avatar={<Avatar className='skill-avatar-letter'>DL</Avatar>}
+                                            label='Driving Licence'
                                             className={classes.chip}
                                         />
                                     </CardContent>

@@ -1,31 +1,14 @@
-import React, { Component, forwardRef } from 'react';
+import React, { Component } from 'react';
 import MapContainer from './MapContainer';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Fab from '@material-ui/core/Fab';
+import Card from '@material-ui/core/Card';
+import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import EmailIcon from 'mdi-react/EmailIcon';
 
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Slide from '@material-ui/core/Slide';
-
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MarkunreadMailboxIcon from '@material-ui/icons/MarkunreadMailbox';
-import EmailSecIcon from '@material-ui/icons/Email';
-import CallIcon from '@material-ui/icons/Call';
+import { axios, db } from '../firebase/firebaseConfig';
 
 import '../App.css';
-
-const Transition = forwardRef((props, ref) => {
-    return <Slide ref={ref} direction="up" {...props} />;
-});
 
 const styles = theme => ({
     messageBtn: {
@@ -40,12 +23,33 @@ const styles = theme => ({
         bottom: '25px',
         right: '125px'
     },
+    card: {
+        height: '100%',
+        background: '#4286f4'
+    },
+    textField: {
+        marginLeft: theme.spacing(2),
+        marginRight: theme.spacing(2),
+        width: 'calc(100% - 32px)',
+        marginBottom: 0
+    },
+    buttonContainer: {
+        margin: theme.spacing(2),
+        display: 'flex',
+        justifyContent: 'flex-end'
+    },
+    button: {
+        width: 130
+    }
 });
 
 class Contact extends Component {
-
     state = {
         open: false,
+        name: '',
+        email: '',
+        message: '',
+        snackOpen: false
     };
 
     handleClickOpen = () => {
@@ -56,58 +60,130 @@ class Contact extends Component {
         this.setState({ open: false });
     };
 
+    updateInput = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
+    };
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.sendEmail();
+    };
+
+    sendEmail = () => {
+        const { name, email, message } = this.state;
+
+        if (name && email && message) {
+            const formData = {
+                name,
+                email,
+                message
+            }
+
+            axios.post('https://us-central1-daniel-kanyo-2018.cloudfunctions.net/submit', formData).then(() => {
+                db.collection('emails').add({ formData });
+
+                this.setState({ snackOpen: true });
+            }).catch(error => {
+                console.error(error);
+            });
+
+            this.setState({
+                name: '',
+                email: '',
+                message: '',
+            });
+        }
+    }
+
+    handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        this.setState({ snackOpen: false });
+    };
+
     render() {
         const { classes } = this.props;
-        return (
-            <div className="Contact">
-                <Fab color="primary" aria-label="add" className={classes.messageBtn} onClick={this.handleClickOpen}>
-                    <EmailIcon color="#fff" />
-                </Fab>
-                <MapContainer />
 
-                <Dialog
-                    open={this.state.open}
-                    TransitionComponent={Transition}
-                    keepMounted
-                    onClose={this.handleClose}
-                    aria-labelledby="alert-dialog-slide-title"
-                    aria-describedby="alert-dialog-slide-description"
-                >
-                    <DialogTitle id="alert-dialog-slide-title">
-                        {"My Contact"}
-                    </DialogTitle>
-                    <DialogContent className="dialog-content">
-                        <DialogContentText id="alert-dialog-slide-description">
-                            My contacts are listed below.
-                        </DialogContentText>
-                        <List component="nav">
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <MarkunreadMailboxIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="6723 Szeged, Taban street 38" />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <EmailSecIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="dk@gerhardt.io" />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <CallIcon />
-                                </ListItemIcon>
-                                <ListItemText className="cellnumber" primary="+36 30 77929353" />
-                            </ListItem>
-                        </List>
-                    </DialogContent>
-                    <DialogActions>
-                        <Button onClick={this.handleClose} color="primary">
-                            Close
-                        </Button>
-                    </DialogActions>
-                </Dialog>
-            </div>
+        return (
+            <React.Fragment>
+                <div className='Contact'>
+                    <MapContainer />
+                </div>
+
+                <div className='ContactFrom'>
+                    <Card className={classes.card}>
+                        <form onSubmit={this.handleSubmit}>
+                            <TextField
+                                id='outlined-name'
+                                label='Your name'
+                                name='name'
+                                placeholder='Your name goes here...'
+                                className={classes.textField}
+                                value={this.state.name || ''}
+                                onChange={(e) => this.updateInput(e)}
+                                margin='normal'
+                                variant='outlined'
+                                InputProps={{
+                                    style: {
+                                        color: 'white'
+                                    }
+                                }}
+                            />
+                            <TextField
+                                id='outlined-name'
+                                label='Your email address'
+                                name='email'
+                                placeholder='Please add your email address...'
+                                className={classes.textField}
+                                value={this.state.email || ''}
+                                onChange={(e) => this.updateInput(e)}
+                                margin='normal'
+                                variant='outlined'
+                                InputProps={{
+                                    style: {
+                                        color: 'white'
+                                    }
+                                }}
+                            />
+                            <TextField
+                                id='outlined-name'
+                                label='Message'
+                                name='message'
+                                placeholder='Share your thoughts with me...'
+                                className={classes.textField}
+                                value={this.state.message || ''}
+                                onChange={(e) => this.updateInput(e)}
+                                margin='normal'
+                                variant='outlined'
+                                multiline
+                                rowsMax='4'
+                                rows='4'
+                                InputProps={{
+                                    style: {
+                                        color: 'white'
+                                    }
+                                }}
+                            />
+
+                            <div className={classes.buttonContainer}>
+                                <Button
+                                    type='submit'
+                                    variant='contained'
+                                    color='primary'
+                                    className={classes.button}
+                                    disabled={!this.state.name || !this.state.email || !this.state.message}
+                                >
+                                    Submit
+                                </Button>
+                            </div>
+
+                        </form>
+                    </Card>
+                </div>
+
+            </React.Fragment>
         );
     }
 }

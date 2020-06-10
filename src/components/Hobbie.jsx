@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import '../App.css';
 
-const styles = theme => ({
+const styles = () => ({
     root: {
         flexGrow: 1,
     }
@@ -14,27 +14,27 @@ const styles = theme => ({
 class Hobbie extends Component {
     render() {
         return (
-            <div className="Hobbie">
-                <div className="tab-container">
+            <div className='Hobbie'>
+                <div className='tab-container'>
                     <Grid container spacing={1}>
-                        <Grid className="sw-grid" item xs={12} sm={6}>
+                        <Grid className='sw-grid' item xs={12} sm={6}>
                             <div>
-                                <Paper elevation={2} className="hobbie-pic-container hobbie-pic1"></Paper>
+                                <Paper elevation={2} className='hobbie-pic-container hobbie-pic1'></Paper>
                             </div>
                         </Grid>
-                        <Grid className="sw-grid" item xs={12} sm={6}>
+                        <Grid className='sw-grid' item xs={12} sm={6}>
                             <div>
-                                <Paper elevation={2} className="hobbie-pic-container hobbie-pic2"></Paper>
+                                <Paper elevation={2} className='hobbie-pic-container hobbie-pic2'></Paper>
                             </div>
                         </Grid>
-                        <Grid className="sw-grid" item xs={12} sm={6}>
+                        <Grid className='sw-grid' item xs={12} sm={6}>
                             <div>
-                                <Paper elevation={2} className="hobbie-pic-container hobbie-pic3"></Paper>
+                                <Paper elevation={2} className='hobbie-pic-container hobbie-pic3'></Paper>
                             </div>
                         </Grid>
-                        <Grid className="sw-grid" item xs={12} sm={6}>
+                        <Grid className='sw-grid' item xs={12} sm={6}>
                             <div>
-                                <Paper elevation={2} className="hobbie-pic-container hobbie-pic4"></Paper>
+                                <Paper elevation={2} className='hobbie-pic-container hobbie-pic4'></Paper>
                             </div>
                         </Grid>
                     </Grid>

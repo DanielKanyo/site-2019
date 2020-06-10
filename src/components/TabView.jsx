@@ -17,7 +17,7 @@ import '../App.css';
 
 function TabContainer({ children, dir }) {
     return (
-        <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
+        <Typography component='div' dir={dir} style={{ padding: 8 * 3 }}>
             {children}
         </Typography>
     );
@@ -47,26 +47,39 @@ class TabView extends Component {
 
     render() {
         const { classes, theme } = this.props;
+
         return (
-            <div className="SwipeableView" name="SwipeableView">
+            <div className='SwipeableView' name='SwipeableView'>
                 <div className={classes.root}>
-                    <AppBar position="static" color="default">
+                    <AppBar position='static' color='default'>
                         <Tabs
-                            className="swipeable-view-tabs"
+                            className='swipeable-view-tabs'
                             value={this.props.tabValueProp}
                             onChange={this.handleChange}
-                            indicatorColor="primary"
-                            textColor="primary"
-                            variant="fullWidth"
+                            indicatorColor='primary'
+                            textColor='primary'
+                            variant='fullWidth'
                         >
-                            <Tab label="Work" icon={<WorkIcon />} />
-                            <Tab label="Skills" icon={<StarIcon />} />
-                            <Tab label="Hobbie" icon={<CameraIcon />} />
+                            <Tab label='Work' icon={<WorkIcon />} />
+                            <Tab label='Skills' icon={<StarIcon />} />
+                            <Tab label='Hobbie' icon={<CameraIcon />} />
                         </Tabs>
                     </AppBar>
-                    {this.props.tabValueProp === 0 && <TabContainer dir={theme.direction}><Work /></TabContainer>}
-                    {this.props.tabValueProp === 1 && <TabContainer className="sw-tab-container" dir={theme.direction}><Skills /></TabContainer>}
-                    {this.props.tabValueProp === 2 && <TabContainer className="sw-tab-container" dir={theme.direction}><Hobbie /></TabContainer>}
+                    {
+                        this.props.tabValueProp === 0 && (
+                            <TabContainer dir={theme.direction}><Work /></TabContainer>
+                        )
+                    }
+                    {
+                        this.props.tabValueProp === 1 && (
+                            <TabContainer className='sw-tab-container' dir={theme.direction}><Skills /></TabContainer>
+                        )
+                    }
+                    {
+                        this.props.tabValueProp === 2 && (
+                            <TabContainer className='sw-tab-container' dir={theme.direction}><Hobbie /></TabContainer>
+                        )
+                    }
                 </div>
             </div>
         );

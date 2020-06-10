@@ -15,8 +15,8 @@ const styles = theme => ({
 class Footer extends Component {
     render() {
         return (
-            <div className="Footer">
-                {"Copyright © " + new Date().getFullYear()}
+            <div className='Footer'>
+                {'Copyright © ' + new Date().getFullYear()}
             </div>
         );
     }

@@ -55,9 +55,10 @@ class Header extends Component {
     }
 
     handleToggleDrawer(side, open, e) {
-        let body = document.getElementsByTagName('body')[0];
+        const body = document.getElementsByTagName('body')[0];
+
         if (body.classList.length === 0) {
-            body.classList.add("body-overflow-hidden");
+            body.classList.add('body-overflow-hidden');
         }
 
         this.props.handleToggleDrawer(side, open);
@@ -69,85 +70,85 @@ class Header extends Component {
 
     render() {
         const { classes } = this.props;
+
         return (
-            <div className="Header">
+            <div className='Header'>
                 <div className={classes.root}>
-                    <AppBar className={"app-bar-" + this.props.headerStyleProp.class} position="static">
+                    <AppBar className={'app-bar-' + this.props.headerStyleProp.class} position='static'>
                         <Toolbar>
                             <div className={classes.flex} >
-                                {/* <span className={"header-text-" + this.props.headerStyleProp.class}>Welcome</span> */}
-                                <div className="header-navigation">
+                                <div className='header-navigation'>
                                     <Button
-                                        className={"nav-icon-" + this.props.headerStyleProp.class}
+                                        className={'nav-icon-' + this.props.headerStyleProp.class}
                                         onClick={(e) => this.scrollTo('About')}
                                     >
-                                        <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
+                                        <span className={'header-navigation-item-' + this.props.headerStyleProp.class}>
                                             About Me
                                         </span>
                                     </Button>
                                     <Button
-                                        className={"nav-icon-" + this.props.headerStyleProp.class}
+                                        className={'nav-icon-' + this.props.headerStyleProp.class}
                                         onClick={(e) => { this.scrollTo('SwipeableView'); this.handleTabChange(0) }}
                                     >
-                                        <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
+                                        <span className={'header-navigation-item-' + this.props.headerStyleProp.class}>
                                             Projects
                                         </span>
                                     </Button>
                                     <Button
-                                        className={"nav-icon-" + this.props.headerStyleProp.class}
+                                        className={'nav-icon-' + this.props.headerStyleProp.class}
                                         onClick={(e) => { this.scrollTo('SwipeableView'); this.handleTabChange(1) }}
                                     >
-                                        <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
+                                        <span className={'header-navigation-item-' + this.props.headerStyleProp.class}>
                                             Skills
                                         </span>
                                     </Button>
                                     <Button
-                                        className={"nav-icon-" + this.props.headerStyleProp.class}
+                                        className={'nav-icon-' + this.props.headerStyleProp.class}
                                         onClick={(e) => { this.scrollTo('SwipeableView'); this.handleTabChange(2) }}
                                     >
-                                        <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
+                                        <span className={'header-navigation-item-' + this.props.headerStyleProp.class}>
                                             Hobbie
                                         </span>
                                     </Button>
                                     <Button
-                                        className={"nav-icon-" + this.props.headerStyleProp.class}
+                                        className={'nav-icon-' + this.props.headerStyleProp.class}
                                         onClick={(e) => this.scrollTo('Contact')}
                                     >
-                                        <span className={"header-navigation-item-" + this.props.headerStyleProp.class}>
+                                        <span className={'header-navigation-item-' + this.props.headerStyleProp.class}>
                                             Contact
                                         </span>
                                     </Button>
                                 </div>
                             </div>
-                            <div className="social-menu-line">
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/kanyo.daniel">
-                                    <Button className={"social-icon-" + this.props.headerStyleProp.class}>
+                            <div className='social-menu-line'>
+                                <a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/kanyo.daniel'>
+                                    <Button className={'social-icon-' + this.props.headerStyleProp.class}>
                                         <FacebookBoxIcon color={this.props.headerStyleProp.color} />
                                     </Button>
                                 </a>
-                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/DanielKanyo">
-                                    <Button className={"social-icon-" + this.props.headerStyleProp.class}>
+                                <a target='_blank' rel='noopener noreferrer' href='https://github.com/DanielKanyo'>
+                                    <Button className={'social-icon-' + this.props.headerStyleProp.class}>
                                         <GithubIcon color={this.props.headerStyleProp.color} />
                                     </Button>
                                 </a>
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/daniel_kanyo/">
-                                    <Button className={"social-icon-" + this.props.headerStyleProp.class}>
+                                <a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/daniel_kanyo/'>
+                                    <Button className={'social-icon-' + this.props.headerStyleProp.class}>
                                         <InstagramIcon color={this.props.headerStyleProp.color} />
                                     </Button>
                                 </a>
                             </div>
                             <Button
                                 onClick={(e) => this.handleToggleDrawer('right', true, e)}
-                                className={"menu-btn-" + this.props.headerStyleProp.class}
-                                color="inherit"
-                                aria-label="Menu"
+                                className={'menu-btn-' + this.props.headerStyleProp.class}
+                                color='inherit'
+                                aria-label='Menu'
                             >
                                 <MenuIcon />
                             </Button>
                         </Toolbar>
                     </AppBar>
                 </div>
-                <div className="header-bg-img"></div>
+                <div className='header-bg-img'></div>
             </div>
         );
     }

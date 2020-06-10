@@ -13,8 +13,8 @@ class Content extends Component {
 
     render() {
         return (
-            <div className="Content">
-                <div className="content-placeholder">
+            <div className='Content'>
+                <div className='content-placeholder'>
                     <About />
                     <TabView
                         tabValueProp={this.props.tabValueProp}
