@@ -5,6 +5,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
+import SendIcon from '@material-ui/icons/Send';
+import MailIcon from '@material-ui/icons/Mail';
 
 import { axios, db } from '../firebase/firebaseConfig';
 
@@ -38,14 +41,42 @@ const styles = theme => ({
         display: 'flex',
         justifyContent: 'flex-end'
     },
+    sendIcon: {
+        marginLeft: theme.spacing(1.5),
+        marginTop: -2
+    },
     button: {
-        width: 130
+        padding: '9px 16px 8px 16px'
+    },
+    title: {
+        textAlign: 'center',
+        marginBottom: 24,
+        color: '#b3b3b3',
+        fontSize: 14,
+        fontFamily: '"Roboto", sans-serif'
+    },
+    mailIcon: {
+        position: 'absolute',
+        width: 500,
+        height: 500,
+        transform: 'rotate(30deg)',
+        opacity: .1,
+        color: 'white',
+        top: -25,
+        left: -135,
+        zIndex: 0,
+        pointerEvents: 'none',
+        [theme.breakpoints.up("md")]: {
+            width: 700,
+            height: 700,
+            top: -65,
+        }
     }
 });
 
 class Contact extends Component {
     state = {
-        open: false,
+        snackbarOpen: false,
         name: '',
         email: '',
         message: '',
@@ -54,10 +85,6 @@ class Contact extends Component {
 
     handleClickOpen = () => {
         this.setState({ open: true });
-    };
-
-    handleClose = () => {
-        this.setState({ open: false });
     };
 
     updateInput = (e) => {
@@ -80,10 +107,20 @@ class Contact extends Component {
             }
 
             axios.post('https://us-central1-daniel-kanyo-2018.cloudfunctions.net/submit', formData).then(() => {
-                db.collection('emails').add({ formData });
+                db.collection('emails').add({
+                    ...formData,
+                    emailSent: true,
+                    time: new Date()
+                });
 
                 this.setState({ snackOpen: true });
             }).catch(error => {
+                db.collection('emails').add({
+                    ...formData,
+                    emailSent: false,
+                    time: new Date()
+                });
+
                 console.error(error);
             });
 
@@ -95,25 +132,25 @@ class Contact extends Component {
         }
     }
 
-    handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
+    openSnackbar = () => {
+        this.setState({ snackbarOpen: true });
+    }
 
-        this.setState({ snackOpen: false });
-    };
+    handleCloseSnackbar = () => {
+        this.setState({ snackbarOpen: false });
+    }
 
     render() {
         const { classes } = this.props;
 
         return (
             <React.Fragment>
-                <div className='Contact'>
-                    <MapContainer />
-                </div>
+
+                <div className={classes.title}>Do not hesitate to contact me!</div>
 
                 <div className='ContactFrom'>
                     <Card className={classes.card}>
+                        <MailIcon className={classes.mailIcon} />
                         <form onSubmit={this.handleSubmit}>
                             <TextField
                                 id='outlined-name'
@@ -158,8 +195,8 @@ class Contact extends Component {
                                 margin='normal'
                                 variant='outlined'
                                 multiline
-                                rowsMax='4'
-                                rows='4'
+                                rowsMax='8'
+                                rows='6'
                                 InputProps={{
                                     style: {
                                         color: 'white'
@@ -171,17 +208,33 @@ class Contact extends Component {
                                 <Button
                                     type='submit'
                                     variant='contained'
-                                    color='primary'
                                     className={classes.button}
+                                    color='primary'
                                     disabled={!this.state.name || !this.state.email || !this.state.message}
+                                    onClick={this.openSnackbar}
                                 >
                                     Submit
+                                    <SendIcon className={classes.sendIcon} />
                                 </Button>
                             </div>
 
                         </form>
                     </Card>
                 </div>
+
+                <div className='Contact'>
+                    <MapContainer />
+                </div>
+
+                <Snackbar
+                    open={this.state.snackbarOpen}
+                    onClose={this.handleCloseSnackbar}
+                    autoHideDuration={5000}
+                    ContentProps={{
+                        'aria-describedby': 'message-id',
+                    }}
+                    message={<span id="message-id">Thank you!</span>}
+                />
 
             </React.Fragment>
         );

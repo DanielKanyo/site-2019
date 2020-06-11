@@ -518,7 +518,8 @@ body {
     width: 100%;
     max-width: 730px;
     margin: 0 auto;
-    margin-top: 24px;
+    margin-bottom: 24px;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 580px) {
@@ -589,5 +590,13 @@ body {
 @media screen and (max-width: 700px) {
     .content-about-text {
         padding: 15px 20px 30px 20px;
+    }
+    
+    .trecapp-image {
+        height: 165px;
+    }
+    .work1 {
+        min-height: 266px;
+        max-height: 266px;
     }
 }
