@@ -148,7 +148,7 @@ class Contact extends Component {
 
                 <div className={classes.title}>Do not hesitate to contact me!</div>
 
-                <div className='ContactFrom'>
+                <div className='ContactForm'>
                     <Card className={classes.card}>
                         <MailIcon className={classes.mailIcon} />
                         <form onSubmit={this.handleSubmit}>

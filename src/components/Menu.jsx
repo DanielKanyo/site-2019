@@ -103,7 +103,7 @@ class Menu extends React.Component {
                         </ListItemIcon>
                         <ListItemText primary='Hobbie' />
                     </ListItem>
-                    <ListItem onClick={(e) => this.scrollTo('Contact')} button className='list-item-button'>
+                    <ListItem onClick={(e) => this.scrollTo('ContactForm')} button className='list-item-button'>
                         <ListItemIcon>
                             <MessageProcessingIcon color='rgba(0, 0, 0, 0.54)' />
                         </ListItemIcon>
