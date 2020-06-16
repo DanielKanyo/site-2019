@@ -30,9 +30,14 @@ TabContainer.propTypes = {
 
 const styles = theme => ({
     root: {
-        backgroundColor: theme.palette.background.paper,
         width: '100%',
     },
+    tab: {
+        color: 'white !important'
+    },
+    icon: {
+        fill: 'white !important'
+    }
 });
 
 class TabView extends Component {
@@ -60,9 +65,9 @@ class TabView extends Component {
                             textColor='primary'
                             variant='fullWidth'
                         >
-                            <Tab label='Work' icon={<WorkIcon />} />
-                            <Tab label='Skills' icon={<StarIcon />} />
-                            <Tab label='Hobbie' icon={<CameraIcon />} />
+                            <Tab className={classes.tab} label='Work' icon={<WorkIcon className={classes.icon} />} />
+                            <Tab className={classes.tab} label='Skills' icon={<StarIcon className={classes.icon} />} />
+                            <Tab className={classes.tab} label='Hobbie' icon={<CameraIcon className={classes.icon} />} />
                         </Tabs>
                     </AppBar>
                     {

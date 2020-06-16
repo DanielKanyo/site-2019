@@ -19,12 +19,11 @@ import '../App.css';
 
 const styles = theme => ({
     root: {
-        flexGrow: 1,
+        flexGrow: 1
     },
-    paper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
+    card: {
+        background: '#464646;',
+        color: 'white'
     },
     favourite: {
         height: '60px',
@@ -32,7 +31,11 @@ const styles = theme => ({
     },
     chip: {
         margin: '0px 5px 5px 0px',
+        background: '#676767'
     },
+    avatar: {
+        background: '#333333'
+    }
 });
 
 class Skills extends Component {
